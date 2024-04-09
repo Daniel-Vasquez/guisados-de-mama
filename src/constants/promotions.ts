@@ -1,5 +1,6 @@
 import { type PromotionType } from "@/types/promotions";
 import mexicanStews from "@/images/guisados-mexicanos.jpg"
+import mexicanStews2 from "@/images/guisados-mexicanos-2.jpg"
 
 export const PROMOTIONS: PromotionType[] = [
   {
@@ -43,6 +44,6 @@ export const PROMOTIONS: PromotionType[] = [
       "Añade el código 'CHICHARRON-PROMO' al realizar tu pedido.",
       "Proximamente.",
     ],
-    img: `${mexicanStews.src}`,
+    img: `${mexicanStews2.src}`,
   },
 ]
