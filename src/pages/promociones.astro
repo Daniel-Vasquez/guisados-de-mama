@@ -2,37 +2,23 @@
 import Layout from "@/layouts/Layout.astro";
 import { PROMOTIONS } from "@/constants/promotions";
 import Container from "@/UI/Container.astro";
+import Stew from "@/components/Stew.astro";
+
 ---
 
 <Layout
   title="Promociones"
   description="Promoción por el mes de la madre"
+  className="bg-blue"
 >
   <Container title="Promociones">
     {PROMOTIONS.map(({ title, description, href, img }) => (
-      <div class="bg-blue rounded overflow-hidden shadow-lg hover:bg-blue-light">
-        <div class="relative">
-          <a 
-            href={href}
-            transition:name={`media-image-${img}`}
-          >
-            <img
-              class="w-full h-60"
-              src={img}
-              alt={title}
-            />
-            <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
-          </a>
-        </div>
-        <a href={href} class="flex flex-col px-4 pb-6 pt-2">
-          <p class="font-semibold text-golden text-xl inline-block">
-            {title}
-          </p>
-          <p class="text-white text-sm">
-            {description}
-          </p>
-        </a>
-      </div>
+      <Stew
+        title={title}
+        description={description}
+        href={href}
+        img={img}
+      />
     ))}
   </Container>
 </Layout>

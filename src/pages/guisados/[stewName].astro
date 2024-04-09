@@ -17,9 +17,13 @@ export async function getStaticPaths() {
 const { title, content, description, img, ingredients } = Astro.props;
 ---
 
-<Layout title={title} description={description}>
+<Layout 
+  title={title} 
+  description={description}
+  className="bg-blue"
+>
   <div
-    class="container max-w-4xl m-auto mt-36 p-4 flex flex-col justify-center gap-5 mb-20 lg:w-1/2"
+    class="container max-w-3xl m-auto mt-36 p-4 flex flex-col justify-center gap-5 mb-20"
     transition:name=`media-image-${img}`
   >
     <div class="flex flex-col gap-4 w-full m-auto">

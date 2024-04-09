@@ -9,7 +9,7 @@ interface Props {
 const { title, description, href, img } = Astro.props;
 
 ---
-<div class="bg-blue rounded overflow-hidden shadow-lg hover:bg-blue-light">
+<div class="bg-orange rounded overflow-hidden shadow-lg hover:bg-orange-light">
   <div class="relative">
     <a 
       href={href}
@@ -25,10 +25,10 @@ const { title, description, href, img } = Astro.props;
     </a>
   </div>
   <a href={href} class="flex flex-col p-4">
-    <p class="font-semibold text-golden text-xl inline-block">
+    <p class="font-semibold text-blue-600 text-xl inline-block hover:underline">
       {title}
     </p>
-    <p class="text-white text-sm">
+    <p class="text-black font-medium text-md">
       {description}
     </p>
   </a>

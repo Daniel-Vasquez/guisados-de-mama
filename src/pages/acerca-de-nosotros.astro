@@ -13,6 +13,7 @@ const DEFAULT_TEXT = "Hola,%20Guisados%20de%20mamá,%20me%20gustaría%20ordenar%
 <Layout
   title="Guisados de Mamá"
   description="Bienvenidos a Guisados de mamá, un lugar donde encontrarás los mejores platillos caseros, hechos con amor y sazón. ¡Ven y disfruta de nuestra deliciosa comida!"
+  className="bg-orange"
 >
   <div
     class="my-16 p-3 lg:mt-0"
@@ -25,27 +26,27 @@ const DEFAULT_TEXT = "Hola,%20Guisados%20de%20mamá,%20me%20gustaría%20ordenar%
 
       <div class="max-w-xl flex flex-col justify-center gap-3">
         <div>
-          <h1 class="text-3xl font-bold text-golden md:text-4xl">
+          <h1 class="text-3xl font-bold text-blue md:text-4xl">
             Monica Flores,
           </h1>
           <h1 class="text-3xl font-bold text-white md:text-4xl">
             emprendedora de
-            <span class="text-golden">Guisados de Mamá</span>.
+            <span class="text-blue">Guisados de Mamá</span>.
           </h1>
         </div>
-        <p class="text-xl text-white">
+        <p class="text-xl font-semibold text-white">
           Bienvenidos, en este lugar encontrarás los mejores platillos caseros,
           hechos con amor y sazón. ¡Ven y disfruta de nuestra deliciosa comida!
         </p>
         <div>
           <a
-            class="flex justify-center items-center gap-2 text-xl font-semibold text-white hover:text-golden transition-all"
+            class="flex justify-center items-center gap-2 text-xl font-semibold text-blue hover:underline transition-all"
             href={`https://wa.me/${PUBLIC_MY_PHONE_NUMBER}?text=${DEFAULT_TEXT}`}
             target="_blank"
             rel="noopener noreferrer"
           >
             Haz tu pedido por
-            <LogoWhatsapp className="text-green-400 w-11" />
+            <LogoWhatsapp className="text-green-600 w-11 transition-all hover:scale-95" />
           </a>
         </div>
       </div>
@@ -53,7 +54,7 @@ const DEFAULT_TEXT = "Hola,%20Guisados%20de%20mamá,%20me%20gustaría%20ordenar%
 
     <section class="container max-w-4xl m-auto mb-16">
       <p class="text-3xl text-center font-semibold text-white">
-        CONOCE A NUESTRO <span class="text-golden">EQUIPO</span>:
+        CONOCE A NUESTRO <span class="text-blue">EQUIPO</span>:
       </p>
 
       <CollaboratorsCard />
@@ -62,7 +63,7 @@ const DEFAULT_TEXT = "Hola,%20Guisados%20de%20mamá,%20me%20gustaría%20ordenar%
     <section class="flex flex-col gap-10">
       <div class="container bg-blue flex flex-col gap-4 max-w-6xl mx-auto rounded-md text-white p-8 border-2 border-border">
         <h3 class="text-2xl font-bold text-white">
-          Nuestra <strong class="text-golden">misión</strong> es:
+          Nuestra <strong class="text-orange">misión</strong> es:
           ofrecer a nuestros clientes la mejor experiencia culinaria, con
           platillos caseros, hechos con amor y sazón.
         </h3>
@@ -72,7 +73,7 @@ const DEFAULT_TEXT = "Hola,%20Guisados%20de%20mamá,%20me%20gustaría%20ordenar%
         </h3>
 
         <p class="text-2xl">
-          Nuestra <strong class="text-golden">visión</strong> es:
+          Nuestra <strong class="text-orange">visión</strong> es:
           ser el lugar preferido de nuestros clientes, ofreciendo la mejor
           experiencia culinaria, con platillos caseros.
         </p>
@@ -80,7 +81,7 @@ const DEFAULT_TEXT = "Hola,%20Guisados%20de%20mamá,%20me%20gustaría%20ordenar%
 
       <div class="container bg-blue flex flex-col gap-4 max-w-6xl mx-auto rounded-md text-white p-8 border-2 border-border">
         <h3 class="text-2xl font-bold text-white">
-          Nuestros <strong class="text-golden">valores</strong> son:
+          Nuestros valores son:
         </h3>
         <ul class="list-disc list-inside text-xl">
           <li>

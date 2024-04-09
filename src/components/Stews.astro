@@ -1,5 +1,5 @@
 ---
-import Stew from "./Stew.astro";
+import Stew from "@/components/Stew.astro";
 import type { StewType } from "@/types/stews";
 
 interface Props {
@@ -9,9 +9,9 @@ interface Props {
 const { stews } = Astro.props;
 ---
 
-<div class="container m-auto">
+<div class="container max-w-7xl m-auto">
   <hgroup class="my-10 text-center">
-    <h1 class="text-3xl text-white font-bold sm:text-5xl">Guisados</h1>
+    <h1 class="text-3xl text-black font-bold sm:text-5xl">Guisados</h1>
   </hgroup>
 
   <div class="m-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">

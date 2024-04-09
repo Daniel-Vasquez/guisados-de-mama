@@ -5,7 +5,7 @@ import mexicanStews2 from "@/images/guisados-mexicanos-2.jpg"
 export const PROMOTIONS: PromotionType[] = [
   {
     promotionName: "promocion-cochinita-pibil",
-    title: "Promoción de cochinita Pibil",
+    title: "Cochinita Pibil",
     description:
       "Disfruta de un 2x1 en el guisado de cochinita pibil. ¡No te quedes sin probarlo!",
     href: "/promociones/promocion-cochinita-pibil",
@@ -27,11 +27,14 @@ export const PROMOTIONS: PromotionType[] = [
   },
   {
     promotionName: "promocion-chicharron-en-salsa-verde",
-    title: "Proximamente promoción de chicharrón en salsa verde",
+    title: "Chicharrón en salsa verde",
     description:
       "Disfruta de un 2x1 en el guisado de chicharrón en salsa verde. ¡No te quedes sin probarlo!",
     href: "/promociones/promocion-chicharron-en-salsa-verde",
     content: `
+      <h1 class="text-3xl text-center font-bold">
+        *Proximamente*
+      </h1>
       <p>
         Por el mes de las madres disfruta de un 2x1 en el guisado de chicharrón en salsa verde.
       </p>
