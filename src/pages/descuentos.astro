@@ -1,0 +1,46 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { DISCOUNTS } from "@/constants/discounts";
+import Container from "@/UI/Container.astro";
+---
+
+<Layout
+  title="Descuentos"
+  description="Encontrarás ofertas exclusivas en servicios legales de alta calidad. En Salinas Abogados, entendemos que buscar asesoramiento legal puede ser costoso, por lo que nos esforzamos por hacer nuestros servicios más accesibles para todos."
+>
+  <Container title="Descuentos">
+    {DISCOUNTS.map(({ title, description, href, percentage, img }) => (
+      <div class="bg-blue rounded overflow-hidden shadow-lg hover:bg-blue-light">
+        <div class="relative">
+          <a 
+            href={href}
+            transition:name={`media-image-${img}`}
+          >
+            <img
+              class="w-full h-60"
+              src={img}
+              alt={title}
+            />
+            <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+          </a>
+      
+          {percentage && (
+            <a href={href}>
+              <div class="text-sm absolute top-0 right-0 bg-golden text-black rounded-full h-12 w-12 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-blue-light hover:text-white transition duration-500 ease-in-out">
+                <span class="font-bold">-{percentage}</span>
+              </div>
+            </a>
+          )}
+        </div>
+        <a href={href} class="flex flex-col px-4 pb-6 pt-2">
+          <p class="font-semibold text-golden text-xl inline-block">
+            {title}
+          </p>
+          <p class="text-white text-sm">
+            {description}
+          </p>
+        </a>
+      </div>
+    ))}
+  </Container>
+</Layout>

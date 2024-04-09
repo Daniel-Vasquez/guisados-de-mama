@@ -1,0 +1,89 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { DISCOUNTS } from "@/constants/discounts";
+import { formatCurrency } from "@/utils";
+import List from "@/UI/List.astro";
+
+export async function getStaticPaths() {
+  return DISCOUNTS.map(
+    ({ 
+      discountName, 
+      title, 
+      description, 
+      content, 
+      requeriments, 
+      percentage, 
+      discount, 
+      price, 
+      img 
+    }) => {
+      return {
+        params: { discountName },
+        props: { 
+          title, 
+          description, 
+          content, 
+          requeriments, 
+          percentage, 
+          discount, 
+          price, 
+          img 
+        },
+      };
+    }
+  );
+}
+
+const { 
+  title, 
+  description, 
+  content, 
+  requeriments, 
+  percentage, 
+  discount, 
+  price, 
+  img 
+} = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <div 
+    class="container max-w-4xl m-auto mt-36 p-4 flex flex-col justify-center gap-5 mb-20 lg:w-1/2"
+    transition:name=`media-image-${img}`
+  >
+    <div class="flex flex-col gap-4 w-full m-auto">
+      <h1 class="mb-2 py-2 text-4xl font-bold text-center text-golden border-b-2 border-border">
+        {title.toUpperCase()}
+      </h1>
+      <div class="flex flex-col gap-3 text-white" set:html={content} />
+      <div>
+        <p class="text-2xl font-bold text-golden mb-2">Requisitos:</p>
+        <List listServices={requeriments} />
+      </div>
+      <div class="flex flex-col gap-5 text-white">
+        <div class="flex items-center justify-center flex-wrap gap-2">
+          <span class="text-md sm:text-2xl">Descuento del</span>
+          <p class="bg-golden flex justify-center items-center rounded-full w-24 h-24 text-4xl font-bold text-white">
+            {percentage}
+          </p>
+          <span class="text-md sm:text-2xl">al pago inicial</span>
+        </div>
+        <div class="flex items-center justify-center gap-2 flex-wrap text-white">
+          <span class="font-semibold text-xl">
+            Precio original: 
+          </span>
+          <s class="text-red-500 font-bold text-3xl">
+            {formatCurrency(price)}
+          </s>
+        </div>
+        <div class="flex items-center justify-center flex-wrap gap-3">
+          <span class="font-semibold text-3xl">Precio final:</span>
+          <span class="text-5xl font-bold text-golden">
+            {formatCurrency(price - (price * discount))}
+          </span>
+        </div>
+      </div> 
+      <img src={img} alt={title} class="w-full rounded-md aspect-video" />
+    </div>
+  </div>
+</Layout>

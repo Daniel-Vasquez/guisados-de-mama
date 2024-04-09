@@ -1,0 +1,153 @@
+---
+import { fade } from 'astro:transitions';
+import Layout from "@/layouts/Layout.astro";
+import { getImage } from "@/utils";
+import { LogoFacebook } from "@/components/icons/LogoFacebook";
+import { LogoInstagram } from "@/components/icons/LogoInstagram";
+import { CollaboratorsCard } from "@/components/CollaboratorsCard";
+
+const PUBLIC_FACEBOOK_LINK = import.meta.env.PUBLIC_FACEBOOK_LINK;
+const PUBLIC_INSTAGRAM_LINK = import.meta.env.PUBLIC_INSTAGRAM_LINK;
+const PUBLIC_LINK_PROFESSIONAL_LICENSE = import.meta.env.PUBLIC_LINK_PROFESSIONAL_LICENSE;
+---
+
+<Layout
+  title="César Salinas"
+  description="Bienvenidos a Salinas Abogados, nos enorgullece ser una firma legal comprometida con la excelencia, la ética y el servicio excepcional."
+  image={getImage("cesar_salinas.jpeg")}
+>
+  <div 
+    class="my-32 p-3 lg:mt-0" 
+    transition:animate={fade({ duration: '0.5s' })}
+  >
+    <section class="container max-w-7xl m-auto mb-11 flex items-center justify-evenly gap-7 flex-wrap h-auto lg:h-screen">
+      <div class="w-72 h-72 rounded-md border-2 border-border xl:w-96 xl:h-96">
+        <img
+          class="w-full h-full transform translate-x-0 translate-y-0 rounded-md shadow-md lg:translate-x-7 lg:translate-y-7"
+          src={`${getImage("cesar_salinas.jpeg")}`}
+          alt="Salinas Abogados"
+        />
+      </div>
+
+      <div class="max-w-xl flex flex-col justify-center gap-3 translate-y-0 lg:translate-y-7">
+        <div>
+          <h1 class="text-3xl font-bold text-golden md:text-4xl">
+            LIC. CÉSAR SALINAS,
+          </h1>
+          <h1 class="text-3xl font-bold text-white md:text-4xl">
+            Abogado.
+          </h1>
+        </div>
+        <p class="text-xl text-white">
+          Bienvenidos a <strong>Salinas Abogados</strong>, nos enorgullece ser una 
+          <strong class="text-golden">firma legal</strong>
+          comprometida con la excelencia, la ética y el servicio excepcional.
+        </p>
+        <div class="w-56 m-auto text-center py-3 text-white font-medium border-t-2 border-b-2 border-border sm:m-0 sm:text-start">
+          <p>Licenciado en Derecho</p>
+          <p>Cédula Profesional 13924185</p>
+        </div>
+        <div class="flex gap-4 justify-center sm:justify-start">
+          <a
+            class="transition-all hover:scale-90"
+            href={PUBLIC_FACEBOOK_LINK}
+            target="_blank"
+            title="Facebook"
+          >
+            <LogoFacebook className="text-golden w-10" />
+          </a>
+
+          <a
+            class="transition-all hover:scale-90"
+            href={PUBLIC_INSTAGRAM_LINK}
+            target="_blank"
+            title="Instagram"
+          >
+            <LogoInstagram className="text-golden w-10" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container max-w-4xl m-auto mb-16">
+      <p class="text-3xl text-center font-semibold text-white">
+        CONOCE A NUESTRO <span class="text-golden">EQUIPO</span> DE ABOGADOS
+      </p>
+
+      <CollaboratorsCard />
+    </section>
+
+    <section class="flex flex-col gap-10">
+      <div class="container bg-blue flex flex-col gap-4 max-w-6xl mx-auto rounded-md text-white p-8 border-2 border-border">
+        <h3 class="text-2xl font-bold text-white">
+          Nuestra <strong class="text-golden">misión</strong> es proporcionar soluciones
+          jurídicas efectivas y personalizadas que satisfagan las necesidades específicas
+          de cada cliente.
+        </h3>
+        <p>
+          Nos especializamos en una amplia gama de áreas legales, incluyendo
+          derecho penal, civil, familiar, mercantil, laboral y defensa de los
+          Servidores públicos ante el procedimiento administrativo sancionador.
+          Ya sea que enfrenten asuntos legales complejos o necesiten
+          asesoramiento preventivo, estamos aquí para guiarlos en cada paso del
+          proceso.
+        </p>
+
+        <p>
+          En Salinas Abogados, creemos en la discreción, transparencia y la
+          comunicación. Nos esforzamos por establecer relaciones sólidas con
+          nuestros clientes, basadas en la confianza mutua. Entendemos que cada
+          situación legal es única, y nos comprometemos a abordar sus
+          preocupaciones con profesionalismo y empatía.
+        </p>
+
+        <p>
+          Nuestro equipo de abogados altamente calificados está aquí para
+          representar sus intereses y proteger sus derechos. Valoramos la
+          resolución efectiva de casos y trabajamos incansablemente para lograr
+          resultados positivos para nuestros clientes.
+        </p>
+
+        <p>
+          Siendo nosotros su elección, puede confiar en que recibirá un servicio
+          legal de calidad respaldado por una dedicación inquebrantable a su
+          satisfacción, estamos aquí para ser su defensa en el complejo mundo
+          legal.
+        </p>
+
+        <p>
+          Somos su aliado legal de confianza, con años de experiencia y un
+          equipo de profesionales apasionados y siempre en constante
+          actualización, estamos dedicados a 
+          <strong class="text-golden">brindar</strong>
+          asesoramiento legal de calidad a nuestros clientes.
+        </p>
+      </div>
+
+      <div class="container bg-blue flex flex-col gap-4 max-w-6xl mx-auto rounded-md text-white p-8 border-2 border-border">
+        <p>
+          En el universo legal, la elección de un abogado es crucial. En Salinas
+          Abogados, reconocemos la importancia de la transparencia y confianza
+          en cada paso legal que tomas.
+        </p>
+
+        <p>
+          Descubre la tranquilidad de saber que estás respaldado por
+          profesionales de confianza. ¡Bienvenido a una experiencia legal donde
+          la <strong class="text-golden">transparencia</strong> es nuestro compromiso!
+        </p>
+
+        <p>
+          Verifica aquí la veracidad de los profesionales que te representarán:
+          <a
+            class="w-64 text-golden underline hover:text-white transition-all"
+            href={PUBLIC_LINK_PROFESSIONAL_LICENSE}
+            target="_blank"
+          >
+            Registro Nacional de Profesionistas
+          </a>
+        </p>
+      </div>
+    </section>
+  </div>
+</Layout>
