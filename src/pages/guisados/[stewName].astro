@@ -1,20 +1,20 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { SERVICES } from "@/constants/services";
+import { STEWS } from "@/constants/stews";
 import List from "@/UI/List.astro";
 
 export async function getStaticPaths() {
-  return SERVICES.map(
-    ({ serviceName, title, content, description, img, servicios }) => {
+  return STEWS.map(
+    ({ stewName, title, content, description, img, ingredients }) => {
       return {
-        params: { serviceName },
-        props: { title, content, description, img, servicios },
+        params: { stewName },
+        props: { title, content, description, img, ingredients },
       };
     }
   );
 }
 
-const { title, content, description, img, servicios } = Astro.props;
+const { title, content, description, img, ingredients } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
@@ -28,12 +28,12 @@ const { title, content, description, img, servicios } = Astro.props;
       </h1>
       <div class="flex flex-col gap-3 text-white" set:html={content} />
     </div>
-    {servicios.length > 0 && (
+    {ingredients.length > 0 && (
       <div class="text-white text-lg">
         <h2 class="text-2xl font-bold mb-2">
-          Te podemos apoyar con:
+          Los ingredientes de este guiso son:
         </h2>
-        <List listServices={servicios} />
+        <List listIngredients={ingredients} />
       </div>
     )}
     <div>

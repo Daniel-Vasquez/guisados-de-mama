@@ -6,8 +6,8 @@ export const ROUTES: RouteType[] = [
     label: "Inicio",
   },
   {
-    href: "/servicios",
-    label: "Servicios",
+    href: "/guisados",
+    label: "Guisados",
   },
   {
     href: "/descuentos",

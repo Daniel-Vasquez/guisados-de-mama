@@ -1,4 +1,4 @@
-import { getImage } from "@/utils";
+// import { getImage } from "@/utils";
 import { LogoFacebook } from "@/components/icons/LogoFacebook";
 import { LogoInstagram } from "@/components/icons/LogoInstagram";
 import { LogoWhatsapp } from "@/components/icons/LogoWhatsapp";
@@ -12,7 +12,7 @@ export function Contact() {
   return (
     <div
       className="flex flex-col justify-center items-center bg-cover bg-center min-h-screen"
-      style={{ backgroundImage: `url(${getImage("form.jpeg")})` }}
+      // style={{ backgroundImage: `url(${getImage("form.jpeg")})` }}
     >
       <div className="flex flex-col items-center justify-center w-full h-full">
         <h1 className="mb-4 text-4xl font-bold text-white">Contactanos</h1>

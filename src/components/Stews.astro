@@ -1,12 +1,12 @@
 ---
-import Service from "./Service.astro";
-import type { ServiceType } from "@/types/services";
+import Stew from "./Stew.astro";
+import type { StewType } from "@/types/stews";
 
 interface Props {
-  services: ServiceType[];
+  stews: StewType[];
 }
 
-const { services } = Astro.props;
+const { stews } = Astro.props;
 ---
 
 <div class="container m-auto">
@@ -15,8 +15,8 @@ const { services } = Astro.props;
   </hgroup>
 
   <div class="m-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-    {services.map((item: ServiceType) => (
-      <Service
+    {stews.map((item: StewType) => (
+      <Stew
         title={item.title}
         description={item.description}
         href={item.href}
@@ -25,3 +25,4 @@ const { services } = Astro.props;
     ))}
   </div>
 </div>
+@/types/stews

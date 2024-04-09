@@ -1,0 +1,22 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { STEWS } from "@/constants/stews";
+import Stew from "@/components/Stew.astro";
+import Container from "@/UI/Container.astro";
+---
+
+<Layout
+  title="Guisados"
+  description="Guisados en la Ciudad de México"
+>
+  <Container title="Guisados">
+    {STEWS.map(({ title, href, description, img }) => (
+      <Stew
+        title={title}
+        description={description}
+        href={href}
+        img={img}
+      />
+    ))}
+  </Container>
+</Layout>

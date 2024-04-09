@@ -1,8 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import MainBanner from "@/components/MainBanner.astro";
-import Services from "@/components/Services.astro";
-import { SERVICES } from "@/constants/services";
+import Stews from "@/components/Stews.astro";
+import { STEWS } from "@/constants/stews";
 
 ---
 
@@ -11,5 +11,5 @@ import { SERVICES } from "@/constants/services";
   description="En Guisados de Mamá nos dedicamos a llevar a tu mesa los mejores platillos caseros, preparados con todo el amor y sazón que solo una mamá puede ofrecer. Nuestros guisados son elaborados con ingredientes frescos y de la mejor calidad."
 >
   <MainBanner />
-  <Services services={SERVICES} />
+  <Stews stews={STEWS} />
 </Layout>
