@@ -12,7 +12,7 @@ export const CollaboratorsCard = () => {
             <span>Tel. <strong>{phone}</strong></span>
             <div class="my-2">
               <p class="block text-base font-bold leading-relaxed text-golden">
-                SERVICIOS ESPECIALIZADOS:
+                Actividades:
               </p>
               <ul class="list-disc list-inside">
                 {services.map((service) => (

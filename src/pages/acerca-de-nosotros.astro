@@ -1,0 +1,105 @@
+---
+import { fade } from "astro:transitions";
+import Layout from "@/layouts/Layout.astro";
+import { LogoWhatsapp } from "@/components/icons/LogoWhatsapp";
+import { CollaboratorsCard } from "@/components/CollaboratorsCard";
+import momStews from "@/images/guisados-de-mama.png";
+
+const PUBLIC_MY_PHONE_NUMBER = import.meta.env.PUBLIC_MY_PHONE_NUMBER;
+const DEFAULT_TEXT = "Hola,%20Guisados%20de%20mamá,%20me%20gustaría%20ordenar%20un%20guisado,%20¿podrían%20ayudarme?"
+
+---
+
+<Layout
+  title="Guisados de Mamá"
+  description="Bienvenidos a Guisados de mamá, un lugar donde encontrarás los mejores platillos caseros, hechos con amor y sazón. ¡Ven y disfruta de nuestra deliciosa comida!"
+>
+  <div
+    class="my-16 p-3 lg:mt-0"
+    transition:animate={fade({ duration: "0.5s" })}
+  >
+    <section class="container max-w-7xl m-auto mb-11 flex items-center justify-evenly gap-7 flex-wrap h-auto lg:h-screen">
+      <div>
+        <img class="w-full h-full" src={momStews.src} alt="Salinas Abogados" />
+      </div>
+
+      <div class="max-w-xl flex flex-col justify-center gap-3">
+        <div>
+          <h1 class="text-3xl font-bold text-golden md:text-4xl">
+            Monica Flores,
+          </h1>
+          <h1 class="text-3xl font-bold text-white md:text-4xl">
+            emprendedora de
+            <span class="text-golden">Guisados de Mamá</span>.
+          </h1>
+        </div>
+        <p class="text-xl text-white">
+          Bienvenidos, en este lugar encontrarás los mejores platillos caseros,
+          hechos con amor y sazón. ¡Ven y disfruta de nuestra deliciosa comida!
+        </p>
+        <div>
+          <a
+            class="flex justify-center items-center gap-2 text-xl font-semibold text-white hover:text-golden transition-all"
+            href={`https://wa.me/${PUBLIC_MY_PHONE_NUMBER}?text=${DEFAULT_TEXT}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Haz tu pedido por
+            <LogoWhatsapp className="text-green-400 w-11" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container max-w-4xl m-auto mb-16">
+      <p class="text-3xl text-center font-semibold text-white">
+        CONOCE A NUESTRO <span class="text-golden">EQUIPO</span>:
+      </p>
+
+      <CollaboratorsCard />
+    </section>
+
+    <section class="flex flex-col gap-10">
+      <div class="container bg-blue flex flex-col gap-4 max-w-6xl mx-auto rounded-md text-white p-8 border-2 border-border">
+        <h3 class="text-2xl font-bold text-white">
+          Nuestra <strong class="text-golden">misión</strong> es:
+          ofrecer a nuestros clientes la mejor experiencia culinaria, con
+          platillos caseros, hechos con amor y sazón.
+        </h3>
+
+        <h3 class="text-2xl font-bold text-white">
+          
+        </h3>
+
+        <p class="text-2xl">
+          Nuestra <strong class="text-golden">visión</strong> es:
+          ser el lugar preferido de nuestros clientes, ofreciendo la mejor
+          experiencia culinaria, con platillos caseros.
+        </p>
+      </div>
+
+      <div class="container bg-blue flex flex-col gap-4 max-w-6xl mx-auto rounded-md text-white p-8 border-2 border-border">
+        <h3 class="text-2xl font-bold text-white">
+          Nuestros <strong class="text-golden">valores</strong> son:
+        </h3>
+        <ul class="list-disc list-inside text-xl">
+          <li>
+            <strong>Calidad:</strong> Ofrecemos platillos de calidad, hechos con
+            los mejores ingredientes.
+          </li>
+          <li>
+            <strong>Amor:</strong> Preparamos nuestros platillos con amor y
+            dedicación.
+          </li>
+          <li>
+            <strong>Sazón:</strong> Nuestros platillos tienen el mejor sazón.
+          </li>
+          <li>
+            <strong>Experiencia:</strong> Ofrecemos la mejor experiencia
+            culinaria.
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</Layout>

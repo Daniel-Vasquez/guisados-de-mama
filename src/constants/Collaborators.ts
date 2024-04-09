@@ -1,30 +1,16 @@
 import { type CollaboratorsType } from "@/types/Collaborators";
+const PUBLIC_MY_PHONE_NUMBER = import.meta.env.PUBLIC_MY_PHONE_NUMBER;
 
 export const COLLABORATORS: CollaboratorsType[] = [
   {
-    name: "Lic. Britany Lopez Mauriño",
-    role: "Abogada",
+    name: "Daniel Vásquez",
+    role: "Programador",
     services: [
-      "Derecho Civil",
-      "Derecho Penal",
-      "Derecho Familiar",
-      "Derecho Laboral",
-      "Derecho Administrativo",
-      "Seguro Social",
+      "Diseñador web.",
+      "Desarrollador web.",
+      "SEO.",
+      "Cofundador.",
     ],
-    phone: "55 3464 8859",
-  },
-  {
-    name: "Lic. Margarita Urbano Vergara",
-    role: "Abogada",
-    services: [
-      "Derecho Civil",
-      "Derecho Penal",
-      "Derecho Familiar",
-      "Derecho Laboral",
-      "Derecho Administrativo",
-      "Seguro Social",
-    ],
-    phone: "55 3820 0395",
+    phone: `${PUBLIC_MY_PHONE_NUMBER}`,
   },
 ]

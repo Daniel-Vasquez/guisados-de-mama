@@ -14,7 +14,7 @@ export const ROUTES: RouteType[] = [
     label: "Promociones",
   },
   {
-    href: "/sobre-nosotros",
-    label: "Sobre nosotros",
+    href: "/acerca-de-nosotros",
+    label: "Acerca de nosotros",
   },
 ];
