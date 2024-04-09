@@ -1,0 +1,56 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { PROMOTIONS } from "@/constants/promotions";
+import List from "@/UI/List.astro";
+
+export async function getStaticPaths() {
+  return PROMOTIONS.map(
+    ({ 
+      promotionName, 
+      title, 
+      description, 
+      content, 
+      requeriments, 
+      img 
+    }) => {
+      return {
+        params: { promotionName },
+        props: { 
+          title, 
+          description, 
+          content, 
+          requeriments,
+          img 
+        },
+      };
+    }
+  );
+}
+
+const { 
+  title, 
+  description, 
+  content, 
+  requeriments,
+  img 
+} = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <div 
+    class="container max-w-4xl m-auto mt-36 p-4 flex flex-col justify-center gap-5 mb-20 lg:w-1/2"
+    transition:name=`media-image-${img}`
+  >
+    <div class="flex flex-col gap-4 w-full m-auto">
+      <h1 class="mb-2 py-2 text-4xl font-bold text-center text-golden border-b-2 border-border">
+        {title.toUpperCase()}
+      </h1>
+      <div class="flex flex-col gap-3 text-white" set:html={content} />
+      <div>
+        <p class="text-2xl font-bold text-golden mb-2">Requisitos:</p>
+        <List listIngredients={requeriments} />
+      </div>
+      <img src={img} alt={title} class="w-full rounded-md aspect-video" />
+    </div>
+  </div>
+</Layout>
