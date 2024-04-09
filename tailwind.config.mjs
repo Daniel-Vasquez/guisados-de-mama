@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
+
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
@@ -27,6 +29,11 @@ export default {
         white: "#FFFFFF",
         border: "#374151",
       },
+
+      textShadow: {
+        sm: '0 3px 2px #ba00ff',
+        lg: '0 5px 7px #ba00ff',
+      },
     },
     minHeight: {
       '96': '24rem', // 384px
@@ -40,5 +47,16 @@ export default {
       'screen': '100vw', // 100vw
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
+  ],
 };
