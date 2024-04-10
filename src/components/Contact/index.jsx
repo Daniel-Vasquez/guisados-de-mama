@@ -1,7 +1,5 @@
-import { LogoWhatsapp } from "@/components/icons/LogoWhatsapp";
 import contactImg from "@/images/contact-img.jpeg";
-const PUBLIC_MY_PHONE_NUMBER = import.meta.env.PUBLIC_MY_PHONE_NUMBER;
-const DEFAULT_TEXT = "Hola,%20*Guisados%20de%20mamá*,%20me%20gustaría%20ordenar%20un%20guisado,%20¿podrían%20ayudarme?";
+import { ContactButton } from "@/components/ContactButton";
 
 export function Contact() {
   return (
@@ -18,15 +16,10 @@ export function Contact() {
         </div>
 
         <div className="bg-blue w-64 m-auto rounded-md hover:bg-blue-medium">
-          <a
-            className="flex justify-center items-center gap-4 w-full h-24 text-white text-2xl font-bold"
-            href={`https://wa.me/${PUBLIC_MY_PHONE_NUMBER}?text=${DEFAULT_TEXT}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Via Whatsapp
-            <LogoWhatsapp className="text-green-500 w-11" />
-          </a>
+          <ContactButton 
+            text="Via Whatsapp" 
+            classButton="flex justify-center items-center gap-4 w-full h-24 text-white text-2xl font-bold"
+          />
         </div>
       </div>
     </div>

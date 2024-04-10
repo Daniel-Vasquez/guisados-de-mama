@@ -8,18 +8,18 @@ import Logo from '@/components/icons/Logo.astro'
   <div class="container mx-auto">
     <div class="flex items-center justify-between border-t-2 border-b-2 border-border py-3">
       <a href="/">
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-3">
         <Logo className="text-white w-16" />
-          <h2 class="text-white text-lg font-bold opacity-80 hover:opacity-100">Guisados de Mamá</h2>
+          <h2 class="text-white text-xl font-bold hover:underline">Los guisados de Mamá</h2>
         </div>
       </a>
-      <nav class="hidden md:block">
+      <nav class="hidden lg:block">
         <ul class="sm:flex gap-3">
           {ROUTES.map(({ href, label }) => (
             <li>
               <a 
                 href={href} 
-                class="text-white hover:text-gray-300"
+                class="text-white border-orange font-semibold text-xl hover:underline"
               >
                 {label}
               </a>
@@ -27,7 +27,7 @@ import Logo from '@/components/icons/Logo.astro'
           ))}
         </ul>
       </nav>
-      <div class="block md:hidden">
+      <div class="block lg:hidden">
         <DropdownMenu client:idle/>
       </div>
     </div>
@@ -39,9 +39,9 @@ import Logo from '@/components/icons/Logo.astro'
     const header = document.getElementById("header");
     if (header !== null && header !== undefined) {
       if (window.scrollY > 50) {
-        header.classList.add("bg-orange");
+        header.classList.add("bg-blue");
       } else {
-        header.classList.remove("bg-orange");
+        header.classList.remove("bg-blue");
       }
     }
   });

@@ -1,6 +1,7 @@
 ---
 import Stew from "@/components/Stew.astro";
 import type { StewType } from "@/types/stews";
+import Container from "@/UI/Container.astro";
 
 interface Props {
   stews: StewType[];
@@ -9,20 +10,13 @@ interface Props {
 const { stews } = Astro.props;
 ---
 
-<div class="container max-w-7xl m-auto">
-  <hgroup class="my-10 text-center">
-    <h1 class="text-3xl text-black font-bold sm:text-5xl">Guisados</h1>
-  </hgroup>
-
-  <div class="m-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5">
-    {stews.map((item: StewType) => (
-      <Stew
-        title={item.title}
-        description={item.description}
-        href={item.href}
-        img={item.img}
-      />
-    ))}
-  </div>
-</div>
-@/types/stews
+<Container title="Guisados" styles="margin-top: 3rem;">
+  {stews.map((item: StewType) => (
+    <Stew
+      title={item.title}
+      description={item.description}
+      href={item.href}
+      img={item.img}
+    />
+  ))}
+</Container>
