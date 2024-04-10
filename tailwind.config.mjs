@@ -31,16 +31,20 @@ export default {
         },
 
         black: "#121112",
-        white: "#FFFFFF",
+        white: "#F9F9F9",
         border: "#374151",
       },
 
       textShadow: {
         sm: '0 3px 2px #ba00ff',
-        lg: '0 5px 7px #ba00ff',
+        lg: '0 5px 7px #202a37',
+      },
+      borderRadius: {
+        '5xl': '5rem',
       },
     },
     minHeight: {
+      '105': '28rem', // 420px
       '96': '24rem', // 384px
       '52': '13rem', // 208px
       '36': '9rem', // 144px

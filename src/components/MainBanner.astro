@@ -1,25 +1,63 @@
 ---
-import bgBanner from "@/images/bg-banner.jpeg"
-import momStews from "@/images/guisados-de-mama.png"
-
+import momStews from "@/images/guisados-mexicanos.jpeg";
+import platoCochinita from "@/images/platillo-cochinita.png";
+import { ContactButton } from "@/components/ContactButton";
+const STYLE_BUTTON = `
+  inline-flex
+  px-4
+  rounded-lg
+  font-semibold
+  items-center
+  gap-2
+  rounded-tl-2xl
+  rounded-tr-lg
+  rounded-br-2xl
+  rounded-bl-lg
+`;
 ---
 
-<div
-  class="flex flex-col bg-cover bg-center md:min-h-screen"
-  style={{ backgroundImage: `url(${bgBanner.src})`}}
->
-  <section class="container mx-auto p-4 flex flex-1 flex-col items-center mt-24 lg:mt-0 lg:flex-row">
-    <hgroup class="max-w-4xl">
-      <h1 class="text-xl text-shadow-lg text-white font-black sm:text-3xl">
-        En <span class="text-golden">Los guisados de Mamá</span> nos dedicamos a llevar a tu mesa los mejores platillos caseros, 
-        preparados con todo el amor y sazón que solo una mamá puede ofrecer. Nuestros guisados 
-        son elaborados con ingredientes frescos y de la mejor calidad.
+<div class="flex flex-col mt-24 lg:mt-0 px-4 lg:min-h-screen">
+  <section class="container max-w-6xl grid grid-col-1 justify-items-center items-center m-auto lg:grid-cols-2">
+    <div>
+      <h1
+        class="text-4xl text-blue text-center font-black my-11 lg:text-6xl md:text-start"
+      >
+        LOS GUISADOS DE MAMÁ.
       </h1>
-    </hgroup>
-    <img
-      src={ momStews.src }
-      alt="Los guisados de Mamá"
-      class="max-w-full m-auto"
-    />
+      <p class="text-xl text-white font-bold">
+        Nos dedicamos a llevar a tu mesa los mejores platillos caseros,
+        preparados con todo el amor y sazón que solo una mamá puede ofrecer.
+        Nuestros guisados son elaborados con ingredientes frescos y de la mejor
+        calidad.
+      </p>
+      <div
+        class="flex flex-wrap justify-center gap-7 mb-11 mt-5 md:justify-start"
+      >
+        <ContactButton
+          text="Haz tu pedido"
+          classButton={`bg-blue text-white py-2 ${STYLE_BUTTON} hover:bg-blue-light`}
+        />
+        <a
+          href="/guisados"
+          class={`bg-black text-white py-5 ${STYLE_BUTTON} hover:bg-blue`}
+        >
+          Conoce nuestro menú
+        </a>
+      </div>
+    </div>
+    <div class="flex justify-center w-full lg:justify-end">
+      <div class="relative w-80">
+        <img
+          src={momStews.src}
+          alt="Los guisados de Mamá"
+          class="w-64 min-h-105 object-fill rounded-tl-5xl rounded-tr-xl rounded-br-5xl rounded-bl-xl m-auto sm:w-80"
+        />
+        <img
+          src={platoCochinita.src}
+          alt="Plato de cochinita"
+          class="hidden absolute -left-28 bottom-0 w-72 rotate-12 lg:block"
+        />
+      </div>
+    </div>
   </section>
 </div>
