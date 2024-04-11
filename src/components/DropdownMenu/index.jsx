@@ -8,7 +8,7 @@ export function DropdownMenu() {
     <div className="">
       <Menu as="div" className="relative inline-block text-left">
         <Menu.Button className="p-2 rounded-md hover:bg-blue">
-          <IconMenu className="text-golden w-7 h-7" />
+          <IconMenu className="text-white w-7 h-7" />
         </Menu.Button>
 
         <Transition
@@ -26,7 +26,7 @@ export function DropdownMenu() {
                 <Menu.Item key={index}>
                   <a
                     href={href}
-                    className="bg-blue-medium text-white rounded-md px-3 py-2 font-bold hover:bg-golden hover:text-black"
+                    className="bg-blue-light text-white rounded-md px-3 py-2 font-bold hover:bg-orange hover:text-black"
                   >
                     {label}
                   </a>

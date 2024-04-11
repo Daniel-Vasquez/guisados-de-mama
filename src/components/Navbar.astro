@@ -1,15 +1,17 @@
 ---
 import { DropdownMenu } from '@/components/DropdownMenu'
 import { ROUTES } from "@/constants/routes";
-import Logo from '@/components/icons/Logo.astro'
+// import Logo from '@/components/icons/Logo.astro'
+import logo from "@/images/guisados-de-mama.png";
+
 ---
 
 <header id="header" class="px-3 py-4 fixed top-0 right-0 left-0 transition-colors duration-500 z-10">
-  <div class="container mx-auto">
+  <div class="mx-auto">
     <div class="flex items-center justify-between border-t-2 border-b-2 border-border py-3">
       <a href="/">
-        <div class="flex items-center gap-3">
-        <Logo className="text-golden w-16" />
+        <div class="flex items-center gap-1">
+          <img src={ logo.src } alt="Los guisados de Mamá" class="w-20" />
           <h2 class="text-white text-xl font-bold hover:underline">Los guisados de Mamá</h2>
         </div>
       </a>
