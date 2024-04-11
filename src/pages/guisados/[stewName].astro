@@ -5,16 +5,16 @@ import List from "@/UI/List.astro";
 
 export async function getStaticPaths() {
   return STEWS.map(
-    ({ stewName, title, content, description, img, ingredients }) => {
+    ({ stewName, title, content, description, img, href, ingredients }) => {
       return {
         params: { stewName },
-        props: { title, content, description, img, ingredients },
+        props: { title, content, description, img, href, ingredients },
       };
     }
   );
 }
 
-const { title, content, description, img, ingredients } = Astro.props;
+const { title, content, description, img, href, ingredients } = Astro.props;
 ---
 
 <Layout 
@@ -24,7 +24,7 @@ const { title, content, description, img, ingredients } = Astro.props;
 >
   <div
     class="container max-w-3xl m-auto mt-36 p-4 flex flex-col justify-center gap-5 mb-20"
-    transition:name=`media-image-${img}`
+    transition:name=`media-image-${href}`
   >
     <div class="flex flex-col gap-4 w-full m-auto">
       <h1 class="mb-2 py-2 text-4xl font-bold text-center text-blue border-b-2 border-border">
