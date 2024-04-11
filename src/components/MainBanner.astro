@@ -2,18 +2,7 @@
 import bannerImg from "@/images/bg-banner.jpg";
 import bannerSaucerImg from "@/images/cochinita-pibil.png";
 import { ContactButton } from "@/components/ContactButton";
-const STYLE_BUTTON = `
-  inline-flex
-  px-4
-  rounded-lg
-  font-semibold
-  items-center
-  gap-2
-  rounded-tl-2xl
-  rounded-tr-lg
-  rounded-br-2xl
-  rounded-bl-lg
-`;
+const STYLE_BUTTON = "inline-flex px-4 rounded-lg font-semibold items-center gap-2 rounded-tl-2xl rounded-tr-lg rounded-br-2xl rounded-bl-lg";
 ---
 
 <div class="flex flex-col mt-24 lg:mt-0 px-5 lg:min-h-screen">
@@ -43,6 +32,14 @@ const STYLE_BUTTON = `
         >
           Conoce nuestro menú
         </a>
+      </div>
+      <div class="flex">
+        <div class="flex flex-col items-start rounded-lg">
+          <p class="text-blue font-semibold text-lg">Tiempo de entrega entre:</p>
+          <span class="text-3xl font-black text-blue">
+            30 - 45 min.
+          </span>
+        </div>
       </div>
     </div>
     <div class="flex justify-center w-full lg:justify-end">

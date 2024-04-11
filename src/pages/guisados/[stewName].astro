@@ -50,5 +50,13 @@ const { title, content, description, img, href, ingredients } = Astro.props;
         <List listIngredients={ingredients} />
       </div>
     )}
+    <div class="flex justify-center">
+      <div class="bg-blue flex flex-col items-center px-5 py-3 rounded-lg">
+        <p class="text-white text-xl">Tiempo de entrega entre:</p>
+        <span class="text-3xl font-semibold text-orange">
+          30 - 45 min.
+        </span>
+      </div>
+    </div>
   </div>
 </Layout>

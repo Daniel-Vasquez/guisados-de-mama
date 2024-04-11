@@ -21,6 +21,10 @@ export function Contact() {
             classButton="flex justify-center items-center gap-4 w-full h-24 text-white text-2xl font-bold"
           />
         </div>
+
+        <p className="text-center mt-5 font-medium">
+          Tiempo de entrega entre: 30-45 min.
+        </p>
       </div>
     </div>
   );

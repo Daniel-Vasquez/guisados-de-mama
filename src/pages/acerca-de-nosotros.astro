@@ -3,8 +3,16 @@ import { fade } from "astro:transitions";
 import Layout from "@/layouts/Layout.astro";
 import { CollaboratorsCard } from "@/components/CollaboratorsCard";
 import { ContactButton } from "@/components/ContactButton";
+import List from "@/UI/List.astro";
+
 import momStews from "@/images/los-guisados-de-mama.png";
 
+const VALUES = [
+  "Calidad: Ofrecemos platillos de calidad, hechos con los mejores ingredientes.",
+  "Amor: Preparamos nuestros platillos con amor y dedicación.",
+  "Sazón: Nuestros platillos tienen el mejor sazón.",
+  "Experiencia: Ofrecemos la mejor experiencia culinaria.",
+]
 ---
 
 <Layout
@@ -21,7 +29,7 @@ import momStews from "@/images/los-guisados-de-mama.png";
         <img class="w-full h-full" src={momStews.src} alt="Salinas Abogados" />
       </div>
 
-      <div class="max-w-xl flex flex-col justify-center gap-3">
+      <div class="max-w-xl flex flex-col justify-center gap-4">
         <div>
           <h1 class="text-3xl font-extrabold text-blue md:text-5xl">
             MÓNICA LÓPEZ,
@@ -35,6 +43,14 @@ import momStews from "@/images/los-guisados-de-mama.png";
           Bienvenidos, en este lugar encontrarás los mejores platillos caseros,
           hechos con amor y sazón. ¡Ven y disfruta de nuestra deliciosa comida!
         </p>
+        <div class="flex">
+          <div class="flex flex-col items-start rounded-lg">
+            <p class="text-blue font-semibold text-md">Tiempo de entrega entre: </p>
+            <span class="text-xl font-black text-blue">
+              30 - 45 min.
+            </span>
+          </div>
+        </div>
         <div>
           <ContactButton 
             text="Haz tu pedido por"
@@ -71,27 +87,11 @@ import momStews from "@/images/los-guisados-de-mama.png";
         </p>
       </div>
 
-      <div class="container bg-blue flex flex-col gap-4 max-w-6xl mx-auto rounded-md text-white p-8 border-2 border-border">
+      <div class="container bg-blue flex flex-col gap-4 max-w-6xl mx-auto rounded-md text-white p-5">
         <h3 class="text-2xl font-bold text-white">
           Nuestros valores son:
         </h3>
-        <ul class="list-disc list-inside text-xl">
-          <li>
-            <strong>Calidad:</strong> Ofrecemos platillos de calidad, hechos con
-            los mejores ingredientes.
-          </li>
-          <li>
-            <strong>Amor:</strong> Preparamos nuestros platillos con amor y
-            dedicación.
-          </li>
-          <li>
-            <strong>Sazón:</strong> Nuestros platillos tienen el mejor sazón.
-          </li>
-          <li>
-            <strong>Experiencia:</strong> Ofrecemos la mejor experiencia
-            culinaria.
-          </li>
-        </ul>
+        <List listIngredients={VALUES} />
       </div>
     </section>
   </div>
