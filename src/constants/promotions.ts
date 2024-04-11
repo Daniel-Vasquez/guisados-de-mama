@@ -1,6 +1,7 @@
 import { type PromotionType } from "@/types/promotions";
-import mexicanStews from "@/images/Stew-tacos.jpg"
-import mexicanStews2 from "@/images/Stew-tacos-2.jpg"
+import cochinitaImg from "@/images/cochinita-pibil.png"
+import chicharronImg from "@/images/chicharron-en-salsa.png"
+
 
 export const PROMOTIONS: PromotionType[] = [
   {
@@ -23,7 +24,7 @@ export const PROMOTIONS: PromotionType[] = [
       "Añade el código 'COCHINITA-PROMO' al realizar tu pedido.",
       "Válido del 1 al 31 de mayo.",
     ],
-    img: `${mexicanStews.src}`,
+    img: `${cochinitaImg.src}`,
   },
   {
     promotionName: "promocion-chicharron-en-salsa-verde",
@@ -47,6 +48,6 @@ export const PROMOTIONS: PromotionType[] = [
       "Añade el código 'CHICHARRON-PROMO' al realizar tu pedido.",
       "Proximamente.",
     ],
-    img: `${mexicanStews2.src}`,
+    img: `${chicharronImg.src}`,
   },
 ]
