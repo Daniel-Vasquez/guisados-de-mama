@@ -1,6 +1,6 @@
 import { type PromotionType } from "@/types/promotions";
-import mexicanStews from "@/images/guisados-mexicanos.jpg"
-import mexicanStews2 from "@/images/guisados-mexicanos-2.jpg"
+import mexicanStews from "@/images/Stew-tacos.jpg"
+import mexicanStews2 from "@/images/Stew-tacos-2.jpg"
 
 export const PROMOTIONS: PromotionType[] = [
   {
