@@ -1,35 +1,53 @@
 ---
+import { formatCurrency } from "@/utils";
+
 interface Props {
   title: string;
-  description: string;
   href: string;
   img: string;
+  priceKilogram: number;
+  priceHalfKilogram: number;
+  priceQuarterKilogram: number;
 };
 
-const { title, description, href, img } = Astro.props;
+const { title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram } = Astro.props;
 
 ---
 <div class="grid grid-rows-[220px,auto]">
-  <div class="flex w-52 h-52 justify-center m-auto translate-y-7">
+  <div class="flex h-48 justify-center m-auto translate-y-7">
     <a 
-      class="rounded-full w-full h-full"
+      class="w-full h-full"
       href={href}
       transition:name=`media-image-${href}`
     >
       <img
-        class="rounded-full w-full h-full object-cover transition-all duration-300 ease-in-out hover:rotate-12"
+        class="w-full h-full object-cover transition-all duration-300 ease-in-out hover:rotate-12"
         src={img}
         alt={title}
         loading="lazy"
       />
     </a>
   </div>
-  <a href={href} class="bg-blue flex flex-col gap-2 items-center rounded-3xl p-4 pt-6">
+  <a href={href} class="bg-blue flex flex-col gap-2 items-center justify-between rounded-3xl p-4 pt-6">
     <p class="font-semibold text-blue-600 text-xl text-center inline-block hover:underline">
       {title.toLocaleUpperCase()}
     </p>
-    <p class="text-white font-medium text-md">
-      {description}
-    </p>
+    <div class="flex flex-col gap-4 sm:flex-row">
+      {priceKilogram !== 0 && (
+        <p class="bg-orange p-2 rounded-md text-white font-semibold text-lg text-center">
+          {formatCurrency(priceKilogram)}/kg
+        </p>
+      )}
+      {priceHalfKilogram !== 0 && (
+        <p class="bg-orange p-2 rounded-md text-white font-semibold text-lg text-center">
+          {formatCurrency(priceHalfKilogram)}/500g
+        </p>
+      )}
+      {priceQuarterKilogram !== 0 && (
+        <p class="bg-orange p-2 rounded-md text-white font-semibold text-lg text-center">
+          {formatCurrency(priceQuarterKilogram)}/250g
+        </p>
+      )}
+    </div>
   </a>
 </div>

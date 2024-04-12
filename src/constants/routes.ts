@@ -10,11 +10,7 @@ export const ROUTES: RouteType[] = [
     label: "Guisados",
   },
   {
-    href: "/promociones",
-    label: "Promociones",
-  },
-  {
-    href: "/acerca-de-nosotros",
-    label: "Acerca de nosotros",
-  },
+    href: "/paquetes",
+    label: "Paquetes",
+  }
 ];

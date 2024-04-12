@@ -1,0 +1,87 @@
+---
+import { fade } from "astro:transitions";
+import Layout from "@/layouts/Layout.astro";
+import cochinitaImg from "@/images/cochinita-pibil.png";
+import moleImg from "@/images/mole.png";
+import chicharronImg from "@/images/chicharron-en-salsa.png";
+import frijolesImg from "@/images/frijoles-charros.png";
+// import { CollaboratorsCard } from "@/components/CollaboratorsCard";
+// import { ContactButton } from "@/components/ContactButton";
+// import List from "@/UI/List.astro";
+// import momStews from "@/images/los-guisados-de-mama.png";
+---
+
+<Layout
+  title="Paquete de guidado"
+  description="Paquete de guidado"
+  className="bg-orange"
+>
+  <div class="mt-36 p-3" transition:animate={fade({ duration: "0.5s" })}>
+    <div class="container mx-auto">
+      <h1 class="text-3xl font-bold text-center text-white mb-3 sm:text-5xl">
+        Paquete de guidado
+      </h1>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-lg">
+          <img
+            src={cochinitaImg.src}
+            alt="Cochinita pibil"
+            class="w-64 h-64 object-cover rounded-lg"
+          />
+          <h2 class="text-2xl font-bold text-center text-orange">
+            Cochinita pibil
+          </h2>
+          <p class="text-center">
+            La cochinita pibil es un platillo tradicional de la gastronomía
+            yucateca, se prepara con carne de cerdo adobada en achiote y
+            envuelta en hojas de plátano.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-lg">
+          <img
+            src={moleImg.src}
+            alt="Mole"
+            class="w-64 h-64 object-cover rounded-lg"
+          />
+          <h2 class="text-2xl font-bold text-center text-orange">Mole</h2>
+          <p class="text-center">
+            El mole es una salsa espesa y picante que se elabora con chiles,
+            chocolate, almendras, cacahuates, ajonjolí y especias.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-lg">
+          <img
+            src={chicharronImg.src}
+            alt="Chicharrón en salsa"
+            class="w-64 h-64 object-cover rounded-lg"
+          />
+          <h2 class="text-2xl font-bold text-center text-orange">
+            Chicharrón en salsa
+          </h2>
+          <p class="text-center">
+            El chicharrón en salsa es un platillo típico de la gastronomía
+            mexicana, se prepara con chicharrón de cerdo y salsa de jitomate.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-lg">
+          <img
+            src={frijolesImg.src}
+            alt="Frijoles charros"
+            class="w-64 h-64 object-cover rounded-lg"
+          />
+          <h2 class="text-2xl font-bold text-center text-orange">
+            Frijoles charros
+          </h2>
+          <p class="text-center">
+            Los frijoles charros son un platillo típico de la gastronomía
+            mexicana, se preparan con frijoles cocidos, tocino, chorizo y
+            chile.
+          </p>
+        </div>
+    </div>
+  </div>
+</Layout>

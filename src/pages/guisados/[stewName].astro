@@ -1,25 +1,54 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { STEWS } from "@/constants/stews";
-import List from "@/UI/List.astro";
+import { formatCurrency } from "@/utils";
 
 export async function getStaticPaths() {
   return STEWS.map(
-    ({ stewName, title, content, description, img, href, ingredients }) => {
+    ({ 
+      stewName, 
+      title, 
+      content, 
+      description,
+      img, 
+      href, 
+      priceKilogram, 
+      priceHalfKilogram, 
+      priceQuarterKilogram 
+    }) => {
       return {
         params: { stewName },
-        props: { title, content, description, img, href, ingredients },
+        props: { 
+          title, 
+          content, 
+          description, 
+          img, 
+          href, 
+          priceKilogram, 
+          priceHalfKilogram, 
+          priceQuarterKilogram 
+        },
       };
     }
   );
 }
 
-const { title, content, description, img, href, ingredients } = Astro.props;
+const { 
+  title, 
+  content, 
+  description, 
+  img, 
+  href, 
+  priceKilogram, 
+  priceHalfKilogram, 
+  priceQuarterKilogram 
+} = Astro.props;
+
 ---
 
 <Layout 
   title={title} 
-  description={description} 
+  description={description}
   className="bg-orange"
 >
   <div
@@ -42,18 +71,38 @@ const { title, content, description, img, href, ingredients } = Astro.props;
         set:html={content}
       />
     </div>
-    {ingredients.length > 0 && (
-      <div class="text-white text-lg">
-        <h2 class="text-2xl font-bold mb-2">
-          Los ingredientes de este guiso son:
-        </h2>
-        <List listIngredients={ingredients} />
+    <div>
+      <div class="flex flex-col justify-center gap-4">
+        {priceKilogram && (
+          <div class="bg-blue flex flex-col items-center m-auto px-5 py-3 rounded-lg">
+            <p class="text-white text-xl">Precio por kilogramo:</p>
+            <span class="text-3xl font-semibold text-orange">
+              {formatCurrency(priceKilogram ?? 0)}
+            </span>
+          </div>
+        )}
+        {priceHalfKilogram && (
+          <div class="bg-blue flex flex-col items-center m-auto px-5 py-3 rounded-lg">
+            <p class="text-white text-xl">Precio por medio kilogramo:</p>
+            <span class="text-3xl font-semibold text-orange">
+              {formatCurrency(priceHalfKilogram ?? 0)}
+            </span>
+          </div>
+        )}
+        {priceQuarterKilogram && (
+          <div class="bg-blue flex flex-col items-center m-auto px-5 py-3 rounded-lg">
+            <p class="text-white text-xl">Precio de un cuarto:</p>
+            <span class="text-3xl font-semibold text-orange">
+              {formatCurrency(priceQuarterKilogram ?? 0)}
+            </span>
+          </div>
+        )}
       </div>
-    )}
+    </div>
     <div class="flex justify-center">
-      <div class="bg-blue flex flex-col items-center px-5 py-3 rounded-lg">
-        <p class="text-white text-xl">Tiempo de entrega entre:</p>
-        <span class="text-3xl font-semibold text-orange">
+      <div class="flex flex-col items-center rounded-lg">
+        <p class="text-white text-md">Tiempo de entrega entre:</p>
+        <span class="text-xl font-semibold text-blue">
           30 - 45 min.
         </span>
       </div>

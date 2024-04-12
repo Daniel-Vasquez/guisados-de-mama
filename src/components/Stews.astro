@@ -14,9 +14,11 @@ const { stews } = Astro.props;
   {stews.map((item: StewType) => (
     <Stew
       title={item.title}
-      description={item.description}
       href={item.href}
       img={item.img}
+      priceKilogram={item.priceKilogram || 0}
+      priceHalfKilogram={item.priceHalfKilogram || 0}
+      priceQuarterKilogram={item.priceQuarterKilogram || 0}
     />
   ))}
 </Container>
