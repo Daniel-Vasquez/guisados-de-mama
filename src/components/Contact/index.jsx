@@ -11,7 +11,7 @@ export function Contact() {
         <div className="flex flex-col items-center justify-center w-full h-full">
           <h1 className="mb-4 text-5xl font-bold text-blue">Contactanos</h1>
           <p className="mb-8 text-lg text-center text-blue">
-            ¿Tegustaría ordenar un guisado? ¡Contáctanos!
+            ¿Te gustaría ordenar un guisado? ¡Contáctanos!
           </p>
         </div>
 
