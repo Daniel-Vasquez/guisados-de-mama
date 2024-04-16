@@ -2,9 +2,12 @@ import { type StewType } from "@/types/stews";
 import cochinitaImg from "@/images/cochinita-pibil.png"
 import moleImg from "@/images/mole.png"
 import chicharronImg from "@/images/chicharron-en-salsa.png"
-import frijolesImg from "@/images/frijoles-charros.png"
-import spaguettiImg from "@/images/spaguetti.png"
-
+import cerdoImg from "@/images/cerdo-en-salsa-verde.png"
+import arrozImg from "@/images/arroz-rojo.png"
+import spaguettiImg from "@/images/spaghetti.png"
+import sopaImg from "@/images/sopa-fria.png"
+import frijolesImg from "@/images/frijoles-refritos.png"
+import salsaImg from "@/images/salsa-roja.png"
 
 export const STEWS: StewType[] = [
   {
@@ -108,7 +111,7 @@ export const STEWS: StewType[] = [
     `,
     priceKilogram: 200,
     priceHalfKilogram: 100,
-    img: `${frijolesImg.src}`,
+    img: `${cerdoImg.src}`,
   },
   {
     title: "Arroz rojo",
@@ -133,7 +136,7 @@ export const STEWS: StewType[] = [
     `,
     priceKilogram: 70,
     priceHalfKilogram: 40,
-    img: `${spaguettiImg.src}`,
+    img: `${arrozImg.src}`,
   },
   {
     title: "Spaguetti rojo",
@@ -180,7 +183,7 @@ export const STEWS: StewType[] = [
     `,
     priceKilogram: 70,
     priceHalfKilogram: 40,
-    img: `${spaguettiImg.src}`,
+    img: `${sopaImg.src}`,
   },
   {
     title: "Frijoles refritos o de la olla",
@@ -203,7 +206,7 @@ export const STEWS: StewType[] = [
     `,
     priceKilogram: 70,
     priceHalfKilogram: 40,
-    img: `${spaguettiImg.src}`,
+    img: `${frijolesImg.src}`,
   },
   {
     title: "Salsa de molcajete roja",
@@ -226,6 +229,6 @@ export const STEWS: StewType[] = [
       </p>
     `,
     priceQuarterKilogram: 30,
-    img: `${spaguettiImg.src}`,
+    img: `${salsaImg.src}`,
   },
 ];
