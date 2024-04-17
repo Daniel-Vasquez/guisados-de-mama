@@ -7,7 +7,7 @@ import sopaImg from "@/images/sopa-fria.png"
 import frijolesImg from "@/images/frijoles-refritos.png"
 import salsaImg from "@/images/salsa-roja.png"
 import albondigasImg from "@/images/albondigas.png"
-import cerdoMoritaImg from "@/images/cerdo-salsa-morita.png"
+import cerdoMoritaImg from "@/images/cerdo-salsa-morita-nopales.png"
 
 export const STEWS: StewType[] = [
   {
@@ -87,11 +87,11 @@ export const STEWS: StewType[] = [
     img: `${albondigasImg.src}`,
   },
   {
-    title: "Cerdo en salsa morita",
-    stewName: "cerdo-en-salsa-morita",
+    title: "Cerdo en salsa morita con nopales",
+    stewName: "cerdo-en-salsa-morita-con-nopales",
     description:
-      "El cerdo en salsa morita es un platillo tradicional mexicano que combina la carne de cerdo con una salsa picante y ahumada de chiles morita. Se prepara cociendo la carne en la salsa morita hasta que se ablande y absorba los sabores, creando un plato sabroso y reconfortante.",
-    href: "/guisados/cerdo-en-salsa-morita",
+      "El cerdo en salsa morita es un platillo tradicional mexicano que combina la carne de cerdo con una salsa picante y ahumada de chiles morita. Se prepara cociendo la carne en la salsa morita hasta que se ablande y absorba los sabores, creando un plato sabroso y reconfortante",
+    href: "/guisados/cerdo-en-salsa-morita-con-nopales",
     content: `
       <p>
         El cerdo en salsa morita es un platillo tradicional mexicano que combina
