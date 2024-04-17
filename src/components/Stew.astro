@@ -13,8 +13,8 @@ interface Props {
 const { title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram } = Astro.props;
 
 ---
-<div class="grid grid-rows-2 sm:grid-rows-[220px,auto]">
-  <div class="flex h-48 justify-center m-auto translate-y-0 sm:translate-y-7">
+<div class="flex flex-col">
+  <div class="flex h-48 justify-center m-auto translate-y-4">
     <a 
       class="w-full h-full"
       href={href}
