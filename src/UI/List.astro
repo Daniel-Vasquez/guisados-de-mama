@@ -2,11 +2,11 @@
 const { listIngredients } = Astro.props;
 
 ---
-<ul class="bg-blue flex flex-col gap-2 text-black text-lg mb-4 p-5 rounded-md">
+<ul class="bg-blue flex flex-col gap-3 text-black text-lg mb-4 p-7 rounded-3xl">
   {listIngredients.map((service: any) => (
-    <li class="flex text-white font-medium">
+    <li class="flex text-white text-xl font-medium justify-center">
       <span class="mr-2">►</span>
-      <span>
+      <span class="text-center">
         {service}
       </span>
     </li>

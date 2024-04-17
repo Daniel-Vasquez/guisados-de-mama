@@ -1,13 +1,13 @@
 import { type StewType } from "@/types/stews";
 import cochinitaImg from "@/images/cochinita-pibil.png"
-import moleImg from "@/images/mole.png"
 import chicharronImg from "@/images/chicharron-en-salsa.png"
-import cerdoImg from "@/images/cerdo-en-salsa-verde.png"
 import arrozImg from "@/images/arroz-rojo.png"
 import spaguettiImg from "@/images/spaghetti.png"
 import sopaImg from "@/images/sopa-fria.png"
 import frijolesImg from "@/images/frijoles-refritos.png"
 import salsaImg from "@/images/salsa-roja.png"
+import albondigasImg from "@/images/albondigas.png"
+import cerdoMoritaImg from "@/images/cerdo-salsa-morita.png"
 
 export const STEWS: StewType[] = [
   {
@@ -62,56 +62,53 @@ export const STEWS: StewType[] = [
     img: `${chicharronImg.src}`,
   },
   {
-    title: "Mole con pollo deshebrado",
-    stewName: "mole-con-pollo-deshebrado",
+    title: "Albondigas al chipotle",
+    stewName: "albondigas-al-chipotle",
     description:
-      "Descubre el exquisito sabor de nuestra receta casera de mole con pollo, una experiencia culinaria que te transportará a los sabores auténticos de México en cada bocado.",
-    href: "/guisados/mole-con-pollo-deshebrado",
+      "Las albóndigas al chipotle son un platillo tradicional mexicano que combina la suavidad de las albóndigas con el sabor picante y ahumado del chipotle. Se preparan cociendo las albóndigas en una salsa de tomate con chipotle, cebolla, ajo y especias, hasta que estén suaves y jugosas.",
+    href: "/guisados/albondigas-al-chipotle",
     content: `
       <p>
-        El mole es un platillo emblemático de la gastronomía mexicana, que se
-        caracteriza por su complejidad de sabores y aromas. Se elabora con una
-        mezcla de chiles, especias, frutas secas, chocolate y otros ingredientes,
-        que se muelen y cocinan hasta obtener una salsa espesa y sabrosa.
-      </p> 
-
-      <p>
-        Existen diferentes tipos de mole en México, como el mole poblano, el
-        mole  oaxaqueño y  el mole verde, cada uno con sus propias variaciones
-        y recetas tradicionales. El mole poblano, por ejemplo, se prepara con
-        chiles secos, chocolate, almendras, pasas y especias, que se muelen y
-        cocinan hasta obtener una salsa espesa y oscura, que se sirve con carne
-        de pollo o pavo.
-      </p>
-    `,
-    priceKilogram: 220,
-    priceHalfKilogram: 110,
-    img: `${moleImg.src}`,
-  },
-  {
-    title: "Cerdo en salsa verde con verdolagas",
-    stewName: "cerdo-en-salsa-verde-con-verdolagas",
-    description:
-      "El cerdo en salsa verde es un platillo tradicional mexicano que tiene sus raíces en la época prehispánica. Se cree que era ya parte de la dieta de los aztecas.",
-    href: "/guisados/cerdo-en-salsa-verde-con-verdolagas",
-    content: `
-      <p>
-        El cerdo en salsa verde con verdolagas es un guisado tradicional mexicano
-        que combina la carne de cerdo con una salsa verde picante y las verdolagas,
-        una hierba silvestre comestible. Se prepara cociendo la carne en la salsa
-        verde con las verdolagas hasta que se ablande y absorba los sabores, creando
-        un plato sabroso y reconfortante.
+        Las albóndigas al chipotle son un platillo tradicional mexicano que combina
+        la suavidad de las albóndigas con el sabor picante y ahumado del chipotle.
+        Se preparan cociendo las albóndigas en una salsa de tomate con chipotle,
+        cebolla, ajo y especias, hasta que estén suaves y jugosas.
       </p>
       <p>
-        La salsa verde se elabora con tomates verdes, chiles, cebolla, ajo y cilantro,
-        que se licúan hasta obtener una mezcla homogénea y ligeramente espesa. Esta
-        salsa se cocina a fuego lento con la carne de cerdo y las verdolagas, permitiendo
-        que los sabores se mezclen y se intensifiquen, creando un guiso delicioso y aromático.
+        La salsa de tomate con chipotle se elabora con tomates, chiles chipotles,
+        cebolla, ajo y especias, que se licúan hasta obtener una mezcla homogénea
+        y ligeramente espesa. Esta salsa se cocina a fuego lento con las albóndigas,
+        permitiendo que los sabores se mezclen y se intensifiquen, creando un guiso
+        delicioso y aromático.
       </p>
     `,
     priceKilogram: 200,
     priceHalfKilogram: 100,
-    img: `${cerdoImg.src}`,
+    img: `${albondigasImg.src}`,
+  },
+  {
+    title: "Cerdo en salsa morita",
+    stewName: "cerdo-en-salsa-morita",
+    description:
+      "El cerdo en salsa morita es un platillo tradicional mexicano que combina la carne de cerdo con una salsa picante y ahumada de chiles morita. Se prepara cociendo la carne en la salsa morita hasta que se ablande y absorba los sabores, creando un plato sabroso y reconfortante.",
+    href: "/guisados/cerdo-en-salsa-morita",
+    content: `
+      <p>
+        El cerdo en salsa morita es un platillo tradicional mexicano que combina
+        la carne de cerdo con una salsa picante y ahumada de chiles morita. Se prepara
+        cociendo la carne en la salsa morita hasta que se ablande y absorba los sabores,
+        creando un plato sabroso y reconfortante.
+      </p>
+      <p>
+        La salsa morita se elabora con chiles morita, tomates, cebolla, ajo y especias,
+        que se licúan hasta obtener una mezcla homogénea y ligeramente espesa. Esta salsa
+        se cocina a fuego lento con la carne de cerdo, permitiendo que los sabores se mezclen
+        y se intensifiquen, creando un guiso delicioso y aromático.
+      </p>
+    `,
+    priceKilogram: 200,
+    priceHalfKilogram: 100,
+    img: `${cerdoMoritaImg.src}`,
   },
   {
     title: "Arroz rojo",

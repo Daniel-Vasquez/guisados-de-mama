@@ -7,8 +7,9 @@ import { ContactButton } from "@/components/ContactButton";
 
 const ELEMENTS_INCLUDED = [
   "1 kg de cualquier guisado.",
-  "1 kg de arroz rojo o 1 kg de sopa fría.",
-  "Medio de frijoles refritos.",
+  "1 kg de sopa fría codito.",
+  "1/2 kg de arroz.",
+  "1/2 kg de frijoles.",
   "Salsa",
   "Tortillas.",
 ];
@@ -29,13 +30,13 @@ const ELEMENTS_INCLUDED = [
         Incuye:
       </h2>
 
-      <div class="max-w-md m-auto my-7">
+      <div class="max-w-sm m-auto my-7">
         <List listIngredients={ELEMENTS_INCLUDED} />
       </div>
 
-      <div class="flex justify-center items-center gap-1 text-2xl font-bold text-center text-white mb-3 sm:text-4xl">
+      <div class="flex flex-col justify-center items-center gap-2 text-4xl font-bold text-center text-blue mb-3">
         Precio: 
-        <span class="text-blue text-5xl">
+        <span class="bg-white text-blue p-3 rounded-lg text-4xl sm:text-6xl">
           $400.00
         </span>
       </div>
@@ -45,6 +46,11 @@ const ELEMENTS_INCLUDED = [
           text="Ordenar"
           classButton="bg-blue text-white py-2 inline-flex px-4 rounded-lg font-semibold items-center gap-2 rounded-tl-2xl rounded-tr-lg rounded-br-2xl rounded-bl-lghover:bg-blue-light"
         />
+      </div>
+      <div class="text-center text-xl font-semibold my-3">
+        <p>Tiempo de entrega entre:</p>
+        <p>30 - 45 min.</p>
+         
       </div>
     </div>
   </div>
