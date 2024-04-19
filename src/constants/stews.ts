@@ -8,6 +8,7 @@ import frijolesImg from "@/images/frijoles-refritos.png"
 import salsaImg from "@/images/salsa-roja.png"
 import albondigasImg from "@/images/albondigas.png"
 import cerdoMoritaImg from "@/images/cerdo-salsa-morita-nopales.png"
+import salsaGuacamoleImg from "@/images/salsa-guacamole.png"
 
 export const STEWS: StewType[] = [
   {
@@ -227,5 +228,27 @@ export const STEWS: StewType[] = [
     `,
     priceQuarterKilogram: 30,
     img: `${salsaImg.src}`,
+  },
+  {
+    title: "Salsa de Guacamole",
+    stewName: "salsa-de-guacamole",
+    description:
+      "Las salsas molcajeteadas son un elemento clave de la gastronomía mexicana. Su preparación es una tradición que ha pasado de generación en generación. Estas salsas son conocidas por su sabor único y su textura rústica, que se obtiene al moler los ingredientes en un molcajete, un mortero de piedra volcánica. Los ingredientes de las salsas molcajeteadas pueden ir desde los clásicos chiles, como el jalapeño, el serrano o el habanero, hasta tomates, cebollas, ajo y cilantro. Otros ingredientes populares incluyen el aguacate y el tomatillo.",
+    href: "/guisados/salsa-de-guacamole",
+    content: `
+      <p>
+        El guacamole es una salsa típica de la gastronomía mexicana, elaborada a base de aguacate, 
+        tomate, cebolla, chile, cilantro y limón. Su sabor es fresco, cremoso y ligeramente picante, 
+        con un toque cítrico y aromático que lo hace único y delicioso.
+      </p>
+      <p>
+        El guacamole es un acompañamiento perfecto para tacos, enchiladas, quesadillas, nachos, 
+        carnes asadas y pescados. También se puede servir como aperitivo con totopos, galletas 
+        saladas o verduras crudas. Es una salsa versátil y deliciosa que se adapta a cualquier 
+        ocasión y paladar.
+      </p>
+    `,
+    priceQuarterKilogram: 30,
+    img: `${salsaGuacamoleImg.src}`,
   },
 ];
