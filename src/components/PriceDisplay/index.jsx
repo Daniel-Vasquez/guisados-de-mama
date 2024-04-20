@@ -25,17 +25,17 @@ export const PriceDisplay = ({
   return (
     <div class="flex flex-col justify-center gap-11 sm:flex-row">
       {priceKilogram && (
-        <PriceCard quantity="1 kg" price={formatCurrency(priceKilogram ?? 0)} />
+        <PriceCard quantity="1" price={formatCurrency(priceKilogram ?? 0)} />
       )}
       {priceHalfKilogram && (
         <PriceCard
-          quantity="1/2 kg"
+          quantity="1/2"
           price={formatCurrency(priceHalfKilogram ?? 0)}
         />
       )}
       {priceQuarterKilogram && (
         <PriceCard
-          quantity="1/4 kg"
+          quantity="1/4"
           price={formatCurrency(priceQuarterKilogram ?? 0)}
         />
       )}
