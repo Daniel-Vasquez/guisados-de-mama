@@ -16,6 +16,10 @@ export const STEWS: StewType[] = [
     stewName: "cochinita-pibil",
     description:
       "Descubre la auténtica experiencia mexicana en cada bocado! Nuestra cochinita pibil te transportará directamente a las calles de Yucatán con su sabor único y tradicional.",
+    additionalIngredients: [
+      "Salsa de habanero.",
+      "Cebolla morada.",
+    ],
     href: "/guisados/cochinita-pibil",
     content: `
       <p>

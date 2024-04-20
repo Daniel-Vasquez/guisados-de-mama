@@ -1,7 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { STEWS } from "@/constants/stews";
-import { formatCurrency } from "@/utils";
+import { PriceDisplay } from "@/components/PriceDisplay"
+import List from "@/UI/List.astro" 
 
 export async function getStaticPaths() {
   return STEWS.map(
@@ -10,6 +11,7 @@ export async function getStaticPaths() {
       title, 
       content, 
       description,
+      additionalIngredients,
       img, 
       href, 
       priceKilogram, 
@@ -21,7 +23,8 @@ export async function getStaticPaths() {
         props: { 
           title, 
           content, 
-          description, 
+          description,
+          additionalIngredients,
           img, 
           href, 
           priceKilogram, 
@@ -37,6 +40,7 @@ const {
   title, 
   content, 
   description, 
+  additionalIngredients,
   img, 
   href, 
   priceKilogram, 
@@ -69,39 +73,24 @@ const {
       <span class="text-blue text-center text-lg font-semibold">
         *Imagen ilustrativa: el producto se vende por envase, no por platillo.*
       </span>
+      {additionalIngredients && (
+        <div class="flex flex-col items-center gap-2">
+          <p class="text-2xl font-semibold text-blue">
+            INCLUYE:
+          </p>
+          <List listIngredients={additionalIngredients} />
+        </div>
+      )}
       <div
         class="flex flex-col gap-3 text-xl font-semibold text-white"
         set:html={content}
       />
     </div>
-    <div>
-      <div class="flex flex-col justify-center gap-4">
-        {priceKilogram && (
-          <div class="bg-blue flex flex-col items-center m-auto px-5 py-3 rounded-lg">
-            <p class="text-white text-xl">Precio por kilogramo:</p>
-            <span class="text-3xl font-semibold text-orange">
-              {formatCurrency(priceKilogram ?? 0)}
-            </span>
-          </div>
-        )}
-        {priceHalfKilogram && (
-          <div class="bg-blue flex flex-col items-center m-auto px-5 py-3 rounded-lg">
-            <p class="text-white text-xl">Precio por medio kilogramo:</p>
-            <span class="text-3xl font-semibold text-orange">
-              {formatCurrency(priceHalfKilogram ?? 0)}
-            </span>
-          </div>
-        )}
-        {priceQuarterKilogram && (
-          <div class="bg-blue flex flex-col items-center m-auto px-5 py-3 rounded-lg">
-            <p class="text-white text-xl">Precio de un cuarto:</p>
-            <span class="text-3xl font-semibold text-orange">
-              {formatCurrency(priceQuarterKilogram ?? 0)}
-            </span>
-          </div>
-        )}
-      </div>
-    </div>
+    <PriceDisplay 
+      priceKilogram={priceKilogram}
+      priceHalfKilogram={priceHalfKilogram}
+      priceQuarterKilogram={priceQuarterKilogram}
+    />
     <div class="flex justify-center">
       <div class="flex flex-col items-center rounded-lg">
         <p class="text-white text-md">Tiempo de entrega entre:</p>
