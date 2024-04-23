@@ -11,7 +11,7 @@ import Container from "@/UI/Container.astro";
   className="bg-orange"
 >
   <Container title="Guisados">
-    {STEWS.map(({ title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram }) => (
+    {STEWS.map(({ title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram, available }) => (
       <Stew
         title={title}
         href={href}
@@ -19,6 +19,7 @@ import Container from "@/UI/Container.astro";
         priceKilogram={priceKilogram ?? 0}
         priceHalfKilogram={priceHalfKilogram ?? 0}
         priceQuarterKilogram={priceQuarterKilogram ?? 0}
+        available={available}
       />
     ))}
   </Container>

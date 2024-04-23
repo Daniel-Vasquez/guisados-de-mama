@@ -9,4 +9,5 @@ export type StewType = {
   priceHalfKilogram?: number;
   priceQuarterKilogram?: number;
   img: string;
+  available: boolean;
 };

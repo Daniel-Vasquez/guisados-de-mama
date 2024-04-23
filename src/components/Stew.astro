@@ -8,9 +8,11 @@ interface Props {
   priceKilogram: number;
   priceHalfKilogram: number;
   priceQuarterKilogram: number;
+  available: any;
 };
 
-const { title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram } = Astro.props;
+const { title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram, available } = Astro.props;
+console.log({available})
 
 ---
 <div class="grid grid-rows-2">
@@ -21,11 +23,16 @@ const { title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram
       transition:name=`media-image-${href}`
     >
       <img
-        class="w-full h-full object-cover transition-all duration-300 ease-in-out hover:rotate-12"
+        class={`w-full h-full object-cover transition-all duration-300 ease-in-out hover:rotate-12 ${available ? 'grayscale-0' : 'grayscale'}`}
         src={img}
         alt={title}
         loading="lazy"
       />
+      {!available && (
+        <div class="absolute inset-0 bg-opacity-50 flex items-center justify-center">
+          <p class="text-white font-semibold text-md">No disponible</p>
+        </div>
+      )}
     </a>
   </div>
   <a href={href} class="flex flex-col gap-2 items-center justify-center rounded-3xl p-4 pt-6">
@@ -35,23 +42,17 @@ const { title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram
     <div class="bg-blue flex flex-col gap-4 p-4 rounded-lg sm:flex-row">
       {priceKilogram !== 0 && (
         <p class="bg-orange p-2 rounded-md text-white font-semibold text-lg text-center">
-          {formatCurrency(priceKilogram)}
-          <span class="font-bold text-blue">/</span>
-          kg
+          {formatCurrency(priceKilogram)}/kg
         </p>
       )}
       {priceHalfKilogram !== 0 && (
         <p class="bg-orange p-2 rounded-md text-white font-semibold text-lg text-center">
-          {formatCurrency(priceHalfKilogram)}
-          <span class="font-bold text-blue">/</span>
-          500g
+          {formatCurrency(priceHalfKilogram)}/500g
         </p>
       )}
       {priceQuarterKilogram !== 0 && (
         <p class="bg-orange p-2 rounded-md text-white font-semibold text-lg text-center">
-          {formatCurrency(priceQuarterKilogram)}
-          <span class="font-bold text-blue">/</span>
-          250g
+          {formatCurrency(priceQuarterKilogram)}/250g
         </p>
       )}
     </div>

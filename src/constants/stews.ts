@@ -40,6 +40,7 @@ export const STEWS: StewType[] = [
     priceKilogram: 300,
     priceHalfKilogram: 200,
     img: `${cochinitaImg.src}`,
+    available: true,
   },
   {
     title: "Chicharron en Salsa Verde",
@@ -66,6 +67,7 @@ export const STEWS: StewType[] = [
     priceKilogram: 120,
     priceHalfKilogram: 60,
     img: `${chicharronImg.src}`,
+    available: true,
   },
   {
     title: "Albondigas al chipotle",
@@ -91,6 +93,7 @@ export const STEWS: StewType[] = [
     priceKilogram: 200,
     priceHalfKilogram: 100,
     img: `${albondigasImg.src}`,
+    available: true,
   },
   {
     title: "Cerdo en salsa morita con nopales",
@@ -115,6 +118,7 @@ export const STEWS: StewType[] = [
     priceKilogram: 200,
     priceHalfKilogram: 100,
     img: `${cerdoMoritaImg.src}`,
+    available: true,
   },
   {
     title: "Arroz rojo",
@@ -140,6 +144,7 @@ export const STEWS: StewType[] = [
     priceKilogram: 70,
     priceHalfKilogram: 40,
     img: `${arrozImg.src}`,
+    available: true,
   },
   {
     title: "Spaguetti rojo",
@@ -165,6 +170,7 @@ export const STEWS: StewType[] = [
     priceKilogram: 70,
     priceHalfKilogram: 40,
     img: `${spaguettiImg.src}`,
+    available: false,
   },
   {
     title: "Sopa fría con jamón (codito)",
@@ -187,6 +193,7 @@ export const STEWS: StewType[] = [
     priceKilogram: 70,
     priceHalfKilogram: 40,
     img: `${sopaImg.src}`,
+    available: true,
   },
   {
     title: "Frijoles refritos o de la olla",
@@ -210,6 +217,7 @@ export const STEWS: StewType[] = [
     priceKilogram: 70,
     priceHalfKilogram: 40,
     img: `${frijolesImg.src}`,
+    available: true,
   },
   {
     title: "Salsa de molcajete roja",
@@ -233,6 +241,7 @@ export const STEWS: StewType[] = [
     `,
     priceQuarterKilogram: 30,
     img: `${salsaImg.src}`,
+    available: true,
   },
   {
     title: "Salsa de Guacamole",
@@ -255,5 +264,6 @@ export const STEWS: StewType[] = [
     `,
     priceQuarterKilogram: 30,
     img: `${salsaGuacamoleImg.src}`,
+    available: true,
   },
 ];
