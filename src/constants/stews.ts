@@ -1,14 +1,15 @@
 import { type StewType } from "@/types/stews";
 import cochinitaImg from "@/images/cochinita-pibil.png"
 import chicharronImg from "@/images/chicharron-en-salsa.png"
+import albondigasImg from "@/images/albondigas.png"
+import cerdoMoritaImg from "@/images/cerdo-salsa-morita-nopales.png"
 import arrozImg from "@/images/arroz-rojo.png"
 import spaguettiImg from "@/images/spaghetti.png"
 import sopaImg from "@/images/sopa-fria.png"
 import frijolesImg from "@/images/frijoles-refritos.png"
 import salsaImg from "@/images/salsa-roja.png"
-import albondigasImg from "@/images/albondigas.png"
-import cerdoMoritaImg from "@/images/cerdo-salsa-morita-nopales.png"
 import salsaGuacamoleImg from "@/images/salsa-guacamole.png"
+
 
 export const STEWS: StewType[] = [
   {
