@@ -1,5 +1,4 @@
 ---
-import bannerImg from "@/images/bg-banner.png";
 import bannerSaucerImg from "@/images/cochinita-pibil.png";
 import { ContactButton } from "@/components/ContactButton";
 const STYLE_BUTTON = "inline-flex px-4 rounded-lg font-semibold items-center gap-2 rounded-tl-2xl rounded-tr-lg rounded-br-2xl rounded-bl-lg";
@@ -46,18 +45,14 @@ const STYLE_BUTTON = "inline-flex px-4 rounded-lg font-semibold items-center gap
         o <span class="font-bold">transferencia</span>*
       </p>
     </div>
-    <div class="flex justify-center w-full h-full lg:justify-end">
-      <div class="relative h-full w-52 md:w-80">
-        <img
-          src={bannerImg.src}
-          alt="Los guisados de Mamá"
-          class="w-full object-fill rounded-tl-5xl rounded-tr-xl rounded-br-5xl rounded-bl-xl m-auto"
-        />
+    <div class="flex justify-center px-5 items-center w-full h-full lg:justify-end">
+      <div class="rotate-12">
         <img
           src={bannerSaucerImg.src}
           alt="Plato de cochinita"
-          class="hidden absolute -left-20 bottom-3 w-52 rotate-12 lg:block"
+          class="w-52 h-64 sm:w-full sm:h-full"
         />
+        <p class="text-center font-semibold text-lg text-blue">*Imagen ilustrativa*</p>
       </div>
     </div>
   </section>
