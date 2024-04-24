@@ -223,7 +223,7 @@ export const STEWS: StewType[] = [
     priceKilogram: 70,
     priceHalfKilogram: 40,
     img: `${spaguettiImg.src}`,
-    available: false,
+    available: true,
   },
   {
     title: "Sopa fría con jamón (codito)",
