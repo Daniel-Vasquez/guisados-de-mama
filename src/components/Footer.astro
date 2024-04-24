@@ -1,20 +1,31 @@
 ---
 import { Contact } from "@/components/Contact";
-const PUBLIC_CONTRIBUTOR_LINKEDIN = import.meta.env.PUBLIC_CONTRIBUTOR_LINKEDIN;
-
+const PUBLIC_CONTRIBUTOR_NUMBER = import.meta.env.PUBLIC_CONTRIBUTOR_NUMBER;
+const DEFAULT_TEXT =
+  "Hola,%20*Me%20gustaría%20saber%20más%20sobre%20tu%20trabajo*";
 ---
 
 <footer>
   <Contact client:idle />
-  <div class="bg-blue p-5">
+  <div class="bg-blue px-4 py-11">
     <div class="text-md text-center text-white">
-      Creado con ❤️ por
+      Creado por
       <a
-        href={PUBLIC_CONTRIBUTOR_LINKEDIN}
+        href={`https://wa.me/${PUBLIC_CONTRIBUTOR_NUMBER}?text=${DEFAULT_TEXT}`}
         target="_blank"
-        class="text-blue-500 opacity-80 hover:opacity-100"
+        class="text-orange text-xl font-bold hover:underline"
       >
-        Dani
+        Daniel V.
+      </a>
+      ¿Quieres saber más sobre mi trabajo? Contáctame.
+    </div>
+    <div class="flex justify-center">
+      <a
+        href={`https://wa.me/${PUBLIC_CONTRIBUTOR_NUMBER}?text=${DEFAULT_TEXT}`}
+        target="_blank"
+        class="text-orange text-lg font-bold hover:underline"
+      >
+        Enviar mensaje.
       </a>
     </div>
   </div>
