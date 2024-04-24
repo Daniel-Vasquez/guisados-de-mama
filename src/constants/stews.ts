@@ -9,20 +9,15 @@ import sopaImg from "@/images/sopa-fria.png"
 import frijolesImg from "@/images/frijoles-refritos.png"
 import salsaImg from "@/images/salsa-roja.png"
 import salsaGuacamoleImg from "@/images/salsa-guacamole.png"
-
+import cochinitaMaizImg from "@/images/complmentos/cochinita-con-tortilla-de-maiz.png"
+import cochinitaCebollaMoradaImg from "@/images/complmentos/cochinita-con-cebolla-morada.png"
+import cochinitaFrijoesImg from "@/images/complmentos/cochinita-con-frijoles.png"
 
 export const STEWS: StewType[] = [
   {
     title: "Cochinita Pibil",
     stewName: "cochinita-pibil",
-    description:
-      "Descubre la auténtica experiencia mexicana en cada bocado! Nuestra cochinita pibil te transportará directamente a las calles de Yucatán con su sabor único y tradicional.",
-    additionalIngredients: [
-      "Salsa de habanero.",
-      "Cebolla morada.",
-    ],
-    href: "/guisados/cochinita-pibil",
-    content: `
+    description: `
       <p>
         La cochinita pibil es un platillo típico de la gastronomía yucateca,
         elaborado con carne de cerdo adobada en achiote y cocida a fuego lento
@@ -36,6 +31,64 @@ export const STEWS: StewType[] = [
         varias horas o incluso días, para que absorba los sabores y se impregne de
         los aromas del adobo.
       </p>
+    `,
+    additionalIngredients: [
+      "Salsa de habanero.",
+      "Cebolla morada.",
+    ],
+    href: "/guisados/cochinita-pibil",
+    content: `
+      <h2 class="text-4xl text-[#d61bb2] text-center my-2">
+        ¿Cuáles son los beneficios de comer cochinita pibil?
+      </h2>
+
+      <p>
+        La cochinita pibil es un platillo tradicional de la cocina yucateca que ofrece varios beneficios además de su delicioso sabor. Algunos de los beneficios de comer cochinita pibil son:
+      </p>
+
+      <ul class="text-lg">
+        <li>
+          <strong class="text-gray-700">Alto contenido de proteínas</strong>: La carne de cerdo es una excelente fuente de proteínas, que son esenciales para el crecimiento y la reparación de los tejidos del cuerpo.
+        </li>
+        <li>
+          <strong class="text-gray-700">Rica en vitaminas y minerales</strong>: La cochinita pibil contiene una variedad de vitaminas y minerales, como vitamina C, vitamina A, hierro, zinc y calcio, que son importantes para la salud y el bienestar.
+        </li>
+        <li>
+          <strong class="text-gray-700">Bajo en grasas saturadas</strong>: Aunque la cochinita pibil contiene grasa de cerdo, es baja en grasas saturadas, lo que la hace una opción más saludable que otros platillos fritos o empanizados.
+        </li>
+        <li>
+          <strong class="text-gray-700">Alto contenido de fibra</strong>: La cochinita pibil contiene fibra dietética, que es importante para la digestión y la salud intestinal.
+        </li>
+        <li>
+          <strong class="text-gray-700">Delicioso sabor</strong>: La cochinita pibil es un platillo sabroso y reconfortante que combina los sabores intensos y aromáticos del achiote, los chiles y las especias, con la suavidad y jugosidad de la carne de cerdo.
+        </li>
+      </ul>
+
+      <h2 class="text-4xl text-[#d61bb2] text-center my-2">
+        ¿Qué acompañamientos se suelen servir con los tacos de cochinita? 
+      </h2>
+
+      <p>
+        Los tacos de cochinita pibil se sirven con una gran variedad de guarniciones que le dan un sabor particular, entre los elementos que no deben faltar se encuentran los siguientes:
+      </p>
+
+      <ul class="text-xl">
+        <li>
+          <strong class="text-gray-700">Tortillas de maíz</strong>: En el sur se acostumbra la preparación de tortillas de maíz para los tacos, es preferible que se cuezan al momento y servirlas calentitas.
+          <img src="${cochinitaMaizImg.src}" alt="Tortillas de maíz" class="mx-auto aspect-video">
+          <p class="text-center mb-4">*Imagen ilustrativa*</p>
+        </li>
+        <li>
+          <strong class="text-gray-700">Cebollita morada y chile habanero</strong>: Es el acompañante ideal para los ricos tacos de cochinita pibil, se trata de una salsa fresca y picante que explota los sabores de este platillo.
+          <img src="${cochinitaCebollaMoradaImg.src}" alt="Tortillas de maíz" class="mx-auto aspect-video">
+          <p class="text-center mb-4">*Imagen ilustrativa*</p>
+        </li>
+        <li>
+        <strong class="text-gray-700">Frijoles de la olla</strong>: Los tradicionales frijoles de la olla son un elemento de la cocina prehispánica que no puede faltar como guarnición.
+          <img src="${cochinitaFrijoesImg.src}" alt="Tortillas de maíz" class="mx-auto aspect-video rounded-xl mt-4">
+          <p class="text-center mb-4">*Imagen ilustrativa*</p>
+        </li>
+      </ul>
     `,
     priceKilogram: 300,
     priceHalfKilogram: 200,
@@ -179,11 +232,6 @@ export const STEWS: StewType[] = [
       "¡No hay receta tan fácil y rica como la sopa de coditos fría! Es tan práctica que puedes prepararla cualquier día de la semana y puedes servirla como entrada antes de tu plato fuerte, como guarnición o llevarla como lunch al trabajo o escuela.",
     href: "/guisados/sopa-fria-con-jamon-codito",
     content: `
-      <p>
-        ¡No hay receta tan fácil y rica como la sopa de coditos fría! Es tan práctica
-        que puedes prepararla cualquier día de la semana y puedes servirla como entrada
-        antes de tu plato fuerte, como guarnición o llevarla como lunch al trabajo o escuela.
-      </p>
       <p>
         La sopa de coditos fría es una receta que no puede faltar en tu recetario, ya que
         es muy fácil de hacer y además es muy económica. Además, puedes agregarle los ingredientes

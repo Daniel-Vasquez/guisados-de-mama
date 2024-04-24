@@ -81,10 +81,6 @@ const {
           *No disponible*
         </p>
       )}
-      <div
-        class="flex flex-col gap-3 text-xl font-semibold text-white"
-        set:html={content}
-      />
       {additionalIngredients && (
         <div class="flex flex-col items-center gap-2">
           <p class="text-2xl font-semibold text-blue">
@@ -93,6 +89,10 @@ const {
           <List listIngredients={additionalIngredients} />
         </div>
       )}
+      <div
+        class="flex flex-col gap-3 text-xl font-semibold text-white"
+        set:html={description}
+      />
     </div>
     <PriceDisplay 
       priceKilogram={priceKilogram}
@@ -114,5 +114,9 @@ const {
     <p class="text-center font-semibold text-xl mt-11 max-w-xl m-auto">
       La variedad de guisados puede cambiar periódicamente.
     </p>
+    <div
+      class="flex flex-col gap-3 text-xl font-semibold text-white"
+      set:html={content}
+    />
   </div>
 </Layout>
