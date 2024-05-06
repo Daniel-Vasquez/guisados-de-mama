@@ -3,7 +3,7 @@ import Layout from "@/layouts/Layout.astro";
 import { STEWS } from "@/constants/stews";
 import { PriceDisplay } from "@/components/PriceDisplay"
 import List from "@/UI/List.astro"
-import { ContactButton } from "@/components/ContactButton"
+// import { ContactButton } from "@/components/ContactButton"
 
 export async function getStaticPaths() {
   return STEWS.map(
@@ -100,12 +100,12 @@ const {
       priceHalfKilogram={priceHalfKilogram}
       priceQuarterKilogram={priceQuarterKilogram}
     />
-    <div class="flex justify-center mt-11">
+    <!-- <div class="flex justify-center mt-11">
       <ContactButton 
         text="Haz tu pedido por"
         classButton="bg-blue text-white py-3 inline-flex px-5 rounded-lg font-semibold items-center gap-2 rounded-tl-2xl rounded-tr-lg rounded-br-2xl rounded-bl-lg hover:bg-blue-light"
       />
-    </div>
+    </div> -->
     <div class="flex justify-center">
       <div class="flex flex-col items-center rounded-lg">
         <p class="text-black font-medium text-xl mt-7">Tiempo de entrega entre:</p>
