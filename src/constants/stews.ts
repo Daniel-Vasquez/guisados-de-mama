@@ -7,8 +7,9 @@ import arrozImg from "@/images/arroz-rojo.png"
 import spaguettiImg from "@/images/spaghetti.png"
 import sopaImg from "@/images/sopa-fria.png"
 import frijolesImg from "@/images/frijoles-refritos.png"
-import salsaImg from "@/images/salsa-roja.png"
 import salsaGuacamoleImg from "@/images/salsa-guacamole.png"
+import molePolloImg from "@/images/mole-con-pollo.png"
+// import salsaImg from "@/images/salsa-roja.png"
 
 export const STEWS: StewType[] = [
   {
@@ -126,6 +127,31 @@ export const STEWS: StewType[] = [
     available: true,
   },
   {
+    title: "Mole rojo con pollo",
+    stewName: "mole-rojo-con-pollo",
+    description:
+      "El mole rojo con pollo es un platillo tradicional mexicano que combina la suavidad del pollo con la intensidad y complejidad de la salsa de mole rojo. Se prepara cociendo el pollo en la salsa de mole rojo hasta que esté suave y jugoso, creando un plato sabroso y reconfortante.",
+    href: "/guisados/mole-rojo-con-pollo",
+    content: `
+      <p>
+        El mole rojo con pollo es un platillo tradicional mexicano que combina
+        la suavidad del pollo con la intensidad y complejidad de la salsa de
+        mole rojo. Se prepara cociendo el pollo en la salsa de mole rojo hasta
+        que esté suave y jugoso, creando un plato sabroso y reconfortante.
+      </p>
+      <p>
+        La salsa de mole rojo se elabora con chiles secos, especias,
+        frutas secas, chocolate y otros ingredientes, que se muelen y se
+        cocinan juntos hasta obtener una salsa espesa y aromática. Esta salsa
+        se cocina a fuego lento con el pollo, permitiendo que los sabores se
+        mezclen y se intensifiquen, creando un guiso delicioso y aromático.
+      </p>
+    `,
+    priceQuarterKilogram: 30,
+    img: `${molePolloImg.src}`,
+    available: true,
+  },
+  {
     title: "Arroz rojo",
     stewName: "arroz-rojo",
     description:
@@ -240,30 +266,6 @@ export const STEWS: StewType[] = [
     `,
     priceQuarterKilogram: 30,
     img: `${salsaGuacamoleImg.src}`,
-    available: true,
-  },
-  {
-    title: "Salsa de molcajete roja",
-    stewName: "salsa-de-molcajete-roja",
-    description:
-      "No hay nada más mexicano que una buena salsa roja molcajeteadas. Esta salsa es perfecta para acompañar cualquier platillo mexicano, desde tacos y enchiladas hasta carnes asadas y guisados. Su sabor es intenso y picante, con un toque ahumado y terroso que la hace única y deliciosa.",
-    href: "/guisados/salsa-de-molcajete-roja",
-    content: `
-      <p>
-        Las salsas molcajeteadas son un elemento clave de la gastronomía mexicana. 
-        Su preparación es una tradición que ha pasado de generación en generación. 
-        Estas salsas son conocidas por su sabor único y su textura rústica, que se 
-        obtiene al moler los ingredientes en un molcajete, un mortero de piedra 
-        volcánica.
-      </p>
-      <p>
-        Los ingredientes de las salsas molcajeteadas pueden ir desde los clásicos chiles, 
-        como el jalapeño, el serrano o el habanero, hasta tomates, cebollas, ajo y cilantro. 
-        Otros ingredientes populares incluyen el aguacate y el tomatillo.
-      </p>
-    `,
-    priceQuarterKilogram: 30,
-    img: `${salsaImg.src}`,
     available: true,
   },
 ];

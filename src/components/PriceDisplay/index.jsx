@@ -2,15 +2,15 @@ import { formatCurrency } from "@/utils";
 
 const PriceCard = ({ quantity, price }) => {
   return (
-    <div class="bg-blue flex flex-col items-center w-64 px-5 py-3 rounded-lg">
-      <div class="flex gap-2 items-center text-white text-xl">
+    <div className="bg-blue flex flex-col items-center w-64 px-5 py-3 rounded-lg">
+      <div className="flex gap-2 items-center text-white text-xl">
         Precio
-        <span class="text-3xl font-semibold text-golden">
+        <span className="text-3xl font-semibold text-golden">
           {quantity}
         </span>
         kg:
       </div>
-      <span class="text-3xl font-semibold text-orange">
+      <span className="text-3xl font-semibold text-orange">
         {price}
       </span>
     </div>
@@ -23,7 +23,7 @@ export const PriceDisplay = ({
   priceQuarterKilogram,
 }) => {
   return (
-    <div class="flex flex-col justify-center items-center gap-11 sm:flex-row">
+    <div className="flex flex-col justify-center items-center gap-11 sm:flex-row">
       {priceKilogram && (
         <PriceCard quantity="1" price={formatCurrency(priceKilogram ?? 0)} />
       )}
