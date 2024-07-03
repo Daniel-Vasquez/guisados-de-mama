@@ -1,8 +1,7 @@
 ---
 import { Contact } from "@/components/Contact";
-const PUBLIC_CONTRIBUTOR_NUMBER = import.meta.env.PUBLIC_CONTRIBUTOR_NUMBER;
-const DEFAULT_TEXT =
-  "Hola,%20*Me%20gustaría%20saber%20más%20sobre%20tu%20trabajo*";
+const PUBLIC_DEVELOP_LINKEDIN = import.meta.env.PUBLIC_DEVELOP_LINKEDIN;
+
 ---
 
 <footer>
@@ -11,21 +10,11 @@ const DEFAULT_TEXT =
     <div class="text-md text-center text-white">
       Creado por
       <a
-        href={`https://wa.me/${PUBLIC_CONTRIBUTOR_NUMBER}?text=${DEFAULT_TEXT}`}
+        href={PUBLIC_DEVELOP_LINKEDIN}
         target="_blank"
         class="text-orange text-xl font-bold hover:underline"
       >
         Daniel V.
-      </a>
-      ¿Quieres saber más sobre mi trabajo? Contáctame.
-    </div>
-    <div class="flex justify-center">
-      <a
-        href={`https://wa.me/${PUBLIC_CONTRIBUTOR_NUMBER}?text=${DEFAULT_TEXT}`}
-        target="_blank"
-        class="text-orange text-lg font-bold hover:underline"
-      >
-        Enviar mensaje.
       </a>
     </div>
   </div>

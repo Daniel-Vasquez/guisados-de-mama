@@ -2,21 +2,21 @@ import { DropdownMenu } from "@/components/DropdownMenu";
 import { ROUTES } from "@/constants/routes";
 import logo from "@/images/los-guisados-de-mama.png";
 import { LogoHome } from "@/components/icons/LogoHome";
-import { LogoBox } from "@/components/icons/LogoBox";
+import { LogoEmail } from "@/components/icons/LogoEmail";
 import { LogoStews } from "@/components/icons/LogoStews";
 
 const LOGOSSVG = [
   {
-    svg: <LogoHome className="w-9" />,
+    svg: <LogoHome className="w-9 text-golden"/>,
     title: "Inicio",
   },
   {
-    svg: <LogoStews className="w-9" />,
+    svg: <LogoStews className="w-9 text-golden" />,
     title: "Guisados",
   },
   {
-    svg: <LogoBox className="w-9" />,
-    title: "Paquetes",
+    svg: <LogoEmail className="w-9 text-golden" />,
+    title: "Contactanos",
   },
 ];
 
@@ -24,13 +24,13 @@ export const Navbar = () => {
   return (
     <header
       id="header"
-      className="bg-blue w-full h-28 border-2 border-t-0 border-border rounded-b-2xl fixed top-0 right-0 transition-colors duration-500 z-10 lg:right-20 lg:w-20 lg:h-96"
+      className="bg-blue w-full h-28 border-2 border-t-0 border-border rounded-b-2xl fixed top-0 left-0 transition-colors duration-500 z-10 lg:left-5 lg:w-auto lg:h-96"
     >
       <div className="mx-auto">
-        <div className="flex flex-row items-center justify-between h-auto p-3 lg:flex-col lg:h-96">
+        <div className="flex flex-row items-center justify-between h-auto p-2 lg:flex-col lg:h-96">
           <a href="/">
             <div className="flex flex-col justify-center items-center gap-1">
-              <img src={logo.src} alt="Los guisados de Mamá" className=" w-20" />
+              <img src={logo.src} alt="Los guisados de Mamá" className=" w-16" />
             </div>
           </a>
           <nav className="hidden lg:block">

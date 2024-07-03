@@ -1,0 +1,72 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Paquete de guidado" description="Paquete de guidado">
+  <section class="mt-32 px-2 sm:mt-11">
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
+        Contactanos para mas informacion
+      </h2>
+      <p class="mb-11 font-light text-center text-gray-400 sm:text-xl">
+        Estamos para ayudarte, si tienes alguna duda o pregunta no dudes en
+        contactarnos.
+        A continuación, llena el siguiente formulario y nos pondremos en contacto.
+      </p>
+
+      <form action="#" class="space-y-8">
+        <div>
+          <label
+            for="email"
+            class="block mb-2 text-xl font-medium text-white"
+          >
+            Correo
+          </label>
+          <input
+            type="email"
+            id="email"
+            class="shadow-sm bg-blue border border-gray-300 text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+            placeholder="nombre@gmail.com"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="subject"
+            class="block mb-2 text-xl font-medium text-white"
+          >
+            Asunto
+          </label>
+          <input
+            type="text"
+            id="subject"
+            class="block p-3 w-full text-sm text-white bg-blue rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
+            placeholder="Quisiera saber mas sobre..."
+            required
+          />
+        </div>
+        <div class="sm:col-span-2">
+          <label
+            for="message"
+            class="block mb-2 text-xl font-medium text-white"
+          >
+            Mensaje
+          </label>
+          <textarea
+            id="message"
+            rows="6"
+            class="block p-2.5 w-full text-sm text-white bg-blue rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+            placeholder="Hola, me gustaría saber más sobre los paquetes de guisados que..."
+          >
+          </textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-blue py-3 px-5 text-xl font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
+  </section>
+</Layout>
