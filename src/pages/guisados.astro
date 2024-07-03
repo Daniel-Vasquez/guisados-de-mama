@@ -9,7 +9,7 @@ import Container from "@/UI/Container.astro";
   title="Guisados"
   description="Guisados en la Ciudad de México"
 >
-  <Container title="Guisados">
+  <Container title="Menú">
     {STEWS.map(({ title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram, available }) => (
       <Stew
         title={title}
@@ -22,7 +22,4 @@ import Container from "@/UI/Container.astro";
       />
     ))}
   </Container>
-  <p class="text-center font-semibold text-xl mb-11 max-w-sm m-auto">
-    La variedad de guisados puede cambiar periódicamente.
-  </p>
 </Layout>

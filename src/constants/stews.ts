@@ -9,9 +9,6 @@ import sopaImg from "@/images/sopa-fria.png"
 import frijolesImg from "@/images/frijoles-refritos.png"
 import salsaImg from "@/images/salsa-roja.png"
 import salsaGuacamoleImg from "@/images/salsa-guacamole.png"
-import cochinitaMaizImg from "@/images/complmentos/cochinita-con-tortilla-de-maiz.png"
-import cochinitaCebollaMoradaImg from "@/images/complmentos/cochinita-con-cebolla-morada.png"
-import cochinitaFrijoesImg from "@/images/complmentos/cochinita-con-frijoles.png"
 
 export const STEWS: StewType[] = [
   {
@@ -38,57 +35,12 @@ export const STEWS: StewType[] = [
     ],
     href: "/guisados/cochinita-pibil",
     content: `
-      <h2 class="text-4xl text-[#d61bb2] text-center my-2">
-        ¿Cuáles son los beneficios de comer cochinita pibil?
-      </h2>
-
       <p>
-        La cochinita pibil es un platillo tradicional de la cocina yucateca que ofrece varios beneficios además de su delicioso sabor. Algunos de los beneficios de comer cochinita pibil son:
+        La cochinita pibil se sirve tradicionalmente con tortillas de maíz, cebolla
+        morada encurtida, frijoles refritos y salsa de habanero. Estos acompañamientos
+        realzan los sabores de la cochinita pibil y crean una experiencia gastronómica
+        única y deliciosa.
       </p>
-
-      <ul class="text-lg">
-        <li>
-          <strong class="text-gray-700">Alto contenido de proteínas</strong>: La carne de cerdo es una excelente fuente de proteínas, que son esenciales para el crecimiento y la reparación de los tejidos del cuerpo.
-        </li>
-        <li>
-          <strong class="text-gray-700">Rica en vitaminas y minerales</strong>: La cochinita pibil contiene una variedad de vitaminas y minerales, como vitamina C, vitamina A, hierro, zinc y calcio, que son importantes para la salud y el bienestar.
-        </li>
-        <li>
-          <strong class="text-gray-700">Bajo en grasas saturadas</strong>: Aunque la cochinita pibil contiene grasa de cerdo, es baja en grasas saturadas, lo que la hace una opción más saludable que otros platillos fritos o empanizados.
-        </li>
-        <li>
-          <strong class="text-gray-700">Alto contenido de fibra</strong>: La cochinita pibil contiene fibra dietética, que es importante para la digestión y la salud intestinal.
-        </li>
-        <li>
-          <strong class="text-gray-700">Delicioso sabor</strong>: La cochinita pibil es un platillo sabroso y reconfortante que combina los sabores intensos y aromáticos del achiote, los chiles y las especias, con la suavidad y jugosidad de la carne de cerdo.
-        </li>
-      </ul>
-
-      <h2 class="text-4xl text-[#d61bb2] text-center my-2">
-        ¿Qué acompañamientos se suelen servir con los tacos de cochinita? 
-      </h2>
-
-      <p>
-        Los tacos de cochinita pibil se sirven con una gran variedad de guarniciones que le dan un sabor particular, entre los elementos que no deben faltar se encuentran los siguientes:
-      </p>
-
-      <ul class="text-xl">
-        <li>
-          <strong class="text-gray-700">Tortillas de maíz</strong>: En el sur se acostumbra la preparación de tortillas de maíz para los tacos, es preferible que se cuezan al momento y servirlas calentitas.
-          <img src="${cochinitaMaizImg.src}" alt="Tortillas de maíz" class="mx-auto aspect-video">
-          <p class="text-center mb-4">*Imagen ilustrativa*</p>
-        </li>
-        <li>
-          <strong class="text-gray-700">Cebollita morada y chile habanero</strong>: Es el acompañante ideal para los ricos tacos de cochinita pibil, se trata de una salsa fresca y picante que explota los sabores de este platillo.
-          <img src="${cochinitaCebollaMoradaImg.src}" alt="Tortillas de maíz" class="mx-auto aspect-video">
-          <p class="text-center mb-4">*Imagen ilustrativa*</p>
-        </li>
-        <li>
-        <strong class="text-gray-700">Frijoles de la olla</strong>: Los tradicionales frijoles de la olla son un elemento de la cocina prehispánica que no puede faltar como guarnición.
-          <img src="${cochinitaFrijoesImg.src}" alt="Tortillas de maíz" class="mx-auto aspect-video rounded-xl mt-4">
-          <p class="text-center mb-4">*Imagen ilustrativa*</p>
-        </li>
-      </ul>
     `,
     priceKilogram: 300,
     priceHalfKilogram: 200,
@@ -149,7 +101,7 @@ export const STEWS: StewType[] = [
     available: true,
   },
   {
-    title: "Cerdo en salsa morita con nopales",
+    title: "Cerdo en salsa de morita",
     stewName: "cerdo-en-salsa-morita-con-nopales",
     description:
       "El cerdo en salsa morita es un platillo tradicional mexicano que combina la carne de cerdo con una salsa picante y ahumada de chiles morita. Se prepara cociendo la carne en la salsa morita hasta que se ablande y absorba los sabores, creando un plato sabroso y reconfortante",
@@ -268,6 +220,29 @@ export const STEWS: StewType[] = [
     available: true,
   },
   {
+    title: "Salsa de Guacamole",
+    stewName: "salsa-de-guacamole",
+    description:
+      "Las salsas molcajeteadas son un elemento clave de la gastronomía mexicana. Su preparación es una tradición que ha pasado de generación en generación. Estas salsas son conocidas por su sabor único y su textura rústica, que se obtiene al moler los ingredientes en un molcajete, un mortero de piedra volcánica. Los ingredientes de las salsas molcajeteadas pueden ir desde los clásicos chiles, como el jalapeño, el serrano o el habanero, hasta tomates, cebollas, ajo y cilantro. Otros ingredientes populares incluyen el aguacate y el tomatillo.",
+    href: "/guisados/salsa-de-guacamole",
+    content: `
+      <p>
+        El guacamole es una salsa típica de la gastronomía mexicana, elaborada a base de aguacate, 
+        tomate, cebolla, chile, cilantro y limón. Su sabor es fresco, cremoso y ligeramente picante, 
+        con un toque cítrico y aromático que lo hace único y delicioso.
+      </p>
+      <p>
+        El guacamole es un acompañamiento perfecto para tacos, enchiladas, quesadillas, nachos, 
+        carnes asadas y pescados. También se puede servir como aperitivo con totopos, galletas 
+        saladas o verduras crudas. Es una salsa versátil y deliciosa que se adapta a cualquier 
+        ocasión y paladar.
+      </p>
+    `,
+    priceQuarterKilogram: 30,
+    img: `${salsaGuacamoleImg.src}`,
+    available: true,
+  },
+  {
     title: "Salsa de molcajete roja",
     stewName: "salsa-de-molcajete-roja",
     description:
@@ -289,29 +264,6 @@ export const STEWS: StewType[] = [
     `,
     priceQuarterKilogram: 30,
     img: `${salsaImg.src}`,
-    available: true,
-  },
-  {
-    title: "Salsa de Guacamole",
-    stewName: "salsa-de-guacamole",
-    description:
-      "Las salsas molcajeteadas son un elemento clave de la gastronomía mexicana. Su preparación es una tradición que ha pasado de generación en generación. Estas salsas son conocidas por su sabor único y su textura rústica, que se obtiene al moler los ingredientes en un molcajete, un mortero de piedra volcánica. Los ingredientes de las salsas molcajeteadas pueden ir desde los clásicos chiles, como el jalapeño, el serrano o el habanero, hasta tomates, cebollas, ajo y cilantro. Otros ingredientes populares incluyen el aguacate y el tomatillo.",
-    href: "/guisados/salsa-de-guacamole",
-    content: `
-      <p>
-        El guacamole es una salsa típica de la gastronomía mexicana, elaborada a base de aguacate, 
-        tomate, cebolla, chile, cilantro y limón. Su sabor es fresco, cremoso y ligeramente picante, 
-        con un toque cítrico y aromático que lo hace único y delicioso.
-      </p>
-      <p>
-        El guacamole es un acompañamiento perfecto para tacos, enchiladas, quesadillas, nachos, 
-        carnes asadas y pescados. También se puede servir como aperitivo con totopos, galletas 
-        saladas o verduras crudas. Es una salsa versátil y deliciosa que se adapta a cualquier 
-        ocasión y paladar.
-      </p>
-    `,
-    priceQuarterKilogram: 30,
-    img: `${salsaGuacamoleImg.src}`,
     available: true,
   },
 ];

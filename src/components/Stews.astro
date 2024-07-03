@@ -10,7 +10,7 @@ interface Props {
 const { stews } = Astro.props;
 ---
 
-<Container title="Guisados" styles="margin-top: 3rem;">
+<Container title="Menú" styles="margin-top: 3rem;">
   {stews.map((item: StewType) => (
     <Stew
       title={item.title}
