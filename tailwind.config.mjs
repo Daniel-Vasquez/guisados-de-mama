@@ -11,9 +11,9 @@ export default {
         },
 
         blue: {
-          DEFAULT: "#023047", // hard blue
-          light: "#374151", // soft blue
-          medium: "#202a37", // medium blue
+          DEFAULT: "#201d2b", // hard blue
+          light: "#252836", // soft blue
+          medium: "#201d2b", // medium blue
         },
 
         orange: {

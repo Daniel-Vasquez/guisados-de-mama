@@ -4,11 +4,11 @@ import { ContactButton } from "@/components/ContactButton";
 const STYLE_BUTTON = "inline-flex px-4 rounded-lg font-semibold items-center gap-2 rounded-tl-2xl rounded-tr-lg rounded-br-2xl rounded-bl-lg";
 ---
 
-<div class="flex flex-col mt-40 mb-56 px-5">
+<div class="flex flex-col mt-24 mb-40 px-5 h-auto lg:mt-11 lg:h-screen">
   <section class="container grid grid-col-1 justify-items-center items-center m-auto lg:max-w-6xl lg:grid-cols-2">
     <div>
       <h1
-        class="text-4xl text-blue text-center font-black my-11 lg:text-6xl md:text-start"
+        class="text-4xl text-white text-center font-black my-11 lg:text-6xl md:text-start"
       >
         LOS GUISADOS DE MAMÁ.
       </h1>
@@ -23,24 +23,26 @@ const STYLE_BUTTON = "inline-flex px-4 rounded-lg font-semibold items-center gap
       >
         <ContactButton
           text="Haz tu pedido"
-          classButton={`bg-blue text-white py-2 ${STYLE_BUTTON} hover:bg-blue-light`}
+          classButton={`bg-blue text-white py-2 ${STYLE_BUTTON} hover:bg-green-800`}
         />
         <a
           href="/guisados"
-          class={`bg-black text-white py-5 ${STYLE_BUTTON} hover:bg-blue`}
+          class={`bg-black text-white py-5 ${STYLE_BUTTON} hover:bg-blue-medium`}
         >
           Conoce nuestro menú
         </a>
       </div>
       <div class="flex justify-center my-5 md:justify-start">
         <div class="flex flex-col items-center rounded-lg md:items-start">
-          <p class="text-blue font-semibold text-lg">Tiempo de entrega entre:</p>
-          <span class="text-2xl font-black text-blue sm:text-3xl">
+          <p class="text-white font-semibold text-lg">
+            Tiempo de entrega entre:
+          </p>
+          <span class="text-2xl font-black text-white sm:text-3xl">
             30 - 45 min.
           </span>
         </div>
       </div>
-      <p class="mb-11 text-lg text-center md:text-start">
+      <p class="mb-11 text-gray-500 text-lg text-center md:text-start">
         *Pago en <span class="font-bold">Efectivo</span> 
         o <span class="font-bold">transferencia</span>*
       </p>
@@ -52,7 +54,7 @@ const STYLE_BUTTON = "inline-flex px-4 rounded-lg font-semibold items-center gap
           alt="Plato de cochinita"
           class="w-52 h-64 sm:w-full sm:h-full"
         />
-        <p class="text-center font-bold text-sm text-blue">*Imagen ilustrativa*</p>
+        <p class="text-center font-bold text-sm text-gray-400">*Imagen ilustrativa*</p>
       </div>
     </div>
   </section>

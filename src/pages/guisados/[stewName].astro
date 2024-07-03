@@ -57,18 +57,17 @@ const {
 <Layout 
   title={title} 
   description={description}
-  className="bg-orange"
 >
   <div
-    class="container max-w-3xl m-auto mt-36 p-4 flex flex-col justify-center gap-5 mb-7"
+    class="container max-w-3xl m-auto mt-28 p-4 flex flex-col justify-center gap-5 mb-7 lg:mt-11"
     transition:name=`media-image-${href}`
   >
     <div class="flex flex-col gap-4 w-full m-auto">
-      <h1 class="mb-2 py-2 text-4xl font-bold text-center text-blue border-b-2 border-border">
+      <h1 class="mb-2 py-2 text-4xl font-bold text-center text-gray-200 border-b-2 border-border">
         {title.toUpperCase()}
       </h1>
       <div class="text-center">
-        <span class="text-blue text-center text-xl font-semibold">
+        <span class="text-gray-400 text-center text-xl font-semibold">
           Imagen ilustrativa
         </span>
         <img
@@ -84,7 +83,7 @@ const {
       )}
       {additionalIngredients && (
         <div class="flex flex-col items-center gap-2">
-          <p class="text-2xl font-semibold text-blue">
+          <p class="text-2xl font-semibold text-white">
             INCLUYE:
           </p>
           <List listIngredients={additionalIngredients} />
@@ -108,17 +107,17 @@ const {
     </div>
     <div class="flex justify-center">
       <div class="flex flex-col items-center rounded-lg">
-        <p class="text-black font-medium text-xl mt-7">Tiempo de entrega entre:</p>
-        <span class="text-2xl font-semibold text-blue">
+        <p class="text-white font-medium text-xl mt-7">Tiempo de entrega entre:</p>
+        <span class="text-2xl font-semibold text-white">
           30 - 45 min.
         </span>
       </div>
     </div>
-    <p class="my-3 text-center text-lg">
+    <p class="my-3 text-center text-lg text-white">
       *Pago en <span class="font-bold">Efectivo</span> 
       o <span class="font-bold">transferencia</span>*
     </p>
-    <p class="text-center font-semibold text-xl mt-11 max-w-xl m-auto">
+    <p class="text-center text-gray-400 font-semibold text-xl mt-11 max-w-xl m-auto">
       La variedad de guisados puede cambiar periódicamente.
     </p>
     <div
