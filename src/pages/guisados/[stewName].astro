@@ -1,9 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { STEWS } from "@/constants/stews";
-import { PriceDisplay } from "@/components/PriceDisplay"
 import List from "@/UI/List.astro"
 import { ContactButton } from "@/components/ContactButton"
+import { formatCurrency } from "@/utils";
 
 export async function getStaticPaths() {
   return STEWS.map(
@@ -14,9 +14,7 @@ export async function getStaticPaths() {
       additionalIngredients,
       href,
       content,
-      priceKilogram,
-      priceHalfKilogram,
-      priceQuarterKilogram ,
+      price,
       img,
       available
     }) => {
@@ -28,9 +26,7 @@ export async function getStaticPaths() {
           additionalIngredients,
           href,
           content,
-          priceKilogram,
-          priceHalfKilogram,
-          priceQuarterKilogram,
+          price,
           img,
           available
         },
@@ -45,9 +41,7 @@ const {
   additionalIngredients,
   href,
   content,
-  priceKilogram,
-  priceHalfKilogram,
-  priceQuarterKilogram,
+  price,
   img,
   available
 } = Astro.props;
@@ -86,20 +80,18 @@ const {
           <List listIngredients={additionalIngredients} />
         </div>
       )}
+      <p class="p-2 rounded-md text-golden font-semibold text-3xl text-center sm:text-5xl">
+        {formatCurrency(price)}
+      </p>
       <div
         class="flex flex-col gap-3 text-xl font-semibold text-white"
         set:html={description}
       />
     </div>
-    <PriceDisplay 
-      priceKilogram={priceKilogram}
-      priceHalfKilogram={priceHalfKilogram}
-      priceQuarterKilogram={priceQuarterKilogram}
-    />
     <div class="flex justify-center mt-11">
       <ContactButton 
         text="Ordena también por"
-        classButton="bg-blue text-white py-3 inline-flex px-5 rounded-lg font-semibold items-center gap-2 rounded-tl-2xl rounded-tr-lg rounded-br-2xl rounded-bl-lg hover:bg-blue-light"
+        classButton="bg-blue text-white py-3 inline-flex px-5 rounded-lg font-semibold items-center gap-2 rounded-tl-2xl rounded-tr-lg rounded-br-2xl rounded-bl-lg hover:bg-gray-600"
       />
     </div>
     <div

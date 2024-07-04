@@ -15,21 +15,8 @@ export const STEWS: StewType[] = [
   {
     title: "Cochinita Pibil",
     stewName: "cochinita-pibil",
-    description: `
-      <p>
-        La cochinita pibil es un platillo típico de la gastronomía yucateca,
-        elaborado con carne de cerdo adobada en achiote y cocida a fuego lento
-        en hojas de plátano. Su sabor es intenso y aromático, con un toque cítrico
-        y picante que lo hace único y delicioso.
-      </p>
-      <p>
-        El adobo de la cochinita pibil se prepara con achiote, chiles, ajo, cebolla,
-        vinagre, jugo de naranja agria y especias, que se mezclan hasta obtener una
-        pasta espesa y aromática. La carne de cerdo se marina en esta mezcla durante
-        varias horas o incluso días, para que absorba los sabores y se impregne de
-        los aromas del adobo.
-      </p>
-    `,
+    description:
+      "La cochinita pibil es un platillo tradicional de la gastronomía yucateca que se prepara con carne de cerdo adobada en achiote y cocida en hojas de plátano. El resultado es una carne jugosa, tierna y llena de sabor, que se sirve con tortillas de maíz, cebolla morada encurtida, frijoles refritos y salsa de habanero.",
     additionalIngredients: [
       "Salsa de habanero.",
       "Cebolla morada.",
@@ -43,8 +30,7 @@ export const STEWS: StewType[] = [
         única y deliciosa.
       </p>
     `,
-    priceKilogram: 300,
-    priceHalfKilogram: 200,
+    price: 230,
     img: `${cochinitaImg.src}`,
     available: true,
   },
@@ -70,8 +56,7 @@ export const STEWS: StewType[] = [
         y aromático.
       </p>
     `,
-    priceKilogram: 120,
-    priceHalfKilogram: 60,
+    price: 180,
     img: `${chicharronImg.src}`,
     available: true,
   },
@@ -96,8 +81,7 @@ export const STEWS: StewType[] = [
         delicioso y aromático.
       </p>
     `,
-    priceKilogram: 200,
-    priceHalfKilogram: 100,
+    price: 150,
     img: `${albondigasImg.src}`,
     available: true,
   },
@@ -121,8 +105,7 @@ export const STEWS: StewType[] = [
         y se intensifiquen, creando un guiso delicioso y aromático.
       </p>
     `,
-    priceKilogram: 200,
-    priceHalfKilogram: 100,
+    price: 200,
     img: `${cerdoMoritaImg.src}`,
     available: true,
   },
@@ -147,7 +130,7 @@ export const STEWS: StewType[] = [
         mezclen y se intensifiquen, creando un guiso delicioso y aromático.
       </p>
     `,
-    priceQuarterKilogram: 30,
+    price: 120,
     img: `${molePolloImg.src}`,
     available: true,
   },
@@ -172,8 +155,7 @@ export const STEWS: StewType[] = [
         y un sabor delicioso y aromático.
       </p>
     `,
-    priceKilogram: 70,
-    priceHalfKilogram: 40,
+    price: 50,
     img: `${arrozImg.src}`,
     available: true,
   },
@@ -198,8 +180,7 @@ export const STEWS: StewType[] = [
         y un sabor delicioso y aromático.
       </p>
     `,
-    priceKilogram: 70,
-    priceHalfKilogram: 40,
+    price: 65,
     img: `${spaguettiImg.src}`,
     available: true,
   },
@@ -216,8 +197,7 @@ export const STEWS: StewType[] = [
         que más te gusten para darle tu toque personal.
       </p>
     `,
-    priceKilogram: 70,
-    priceHalfKilogram: 40,
+    price: 40,
     img: `${sopaImg.src}`,
     available: true,
   },
@@ -240,8 +220,7 @@ export const STEWS: StewType[] = [
         mexicanos, como tacos, enchiladas, chilaquiles y quesadillas.
       </p>
     `,
-    priceKilogram: 70,
-    priceHalfKilogram: 40,
+    price: 70,
     img: `${frijolesImg.src}`,
     available: true,
   },
@@ -249,7 +228,7 @@ export const STEWS: StewType[] = [
     title: "Salsa de Guacamole",
     stewName: "salsa-de-guacamole",
     description:
-      "Las salsas molcajeteadas son un elemento clave de la gastronomía mexicana. Su preparación es una tradición que ha pasado de generación en generación. Estas salsas son conocidas por su sabor único y su textura rústica, que se obtiene al moler los ingredientes en un molcajete, un mortero de piedra volcánica. Los ingredientes de las salsas molcajeteadas pueden ir desde los clásicos chiles, como el jalapeño, el serrano o el habanero, hasta tomates, cebollas, ajo y cilantro. Otros ingredientes populares incluyen el aguacate y el tomatillo.",
+      "Las salsas molcajeteadas son un elemento clave de la gastronomía mexicana. Su preparación es una tradición que ha pasado de generación en generación. Estas salsas son conocidas por su sabor único y su textura rústica, que se obtiene al moler los ingredientes en un molcajete, un mortero de piedra volcánica.",
     href: "/guisados/salsa-de-guacamole",
     content: `
       <p>
@@ -264,7 +243,7 @@ export const STEWS: StewType[] = [
         ocasión y paladar.
       </p>
     `,
-    priceQuarterKilogram: 30,
+    price: 45,
     img: `${salsaGuacamoleImg.src}`,
     available: true,
   },

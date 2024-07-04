@@ -7,7 +7,7 @@ import { LogoStews } from "@/components/icons/LogoStews";
 
 const LOGOSSVG = [
   {
-    svg: <LogoHome className="w-9 text-golden"/>,
+    svg: <LogoHome className="w-10 text-golden"/>,
     title: "Inicio",
   },
   {

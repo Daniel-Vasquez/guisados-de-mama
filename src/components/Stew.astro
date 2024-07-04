@@ -5,16 +5,14 @@ interface Props {
   title: string;
   href: string;
   img: string;
-  priceKilogram: number;
-  priceHalfKilogram: number;
-  priceQuarterKilogram: number;
+  price: number;
   available: boolean;
 };
 
-const { title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram, available } = Astro.props;
+const { title, href, img, price, available } = Astro.props;
 
 ---
-<div class="grid grid-rows-[120px_1fr]">
+<div class="grid grid-rows-[100px_1fr]">
   <div class="flex w-48 justify-center m-auto -rotate-12 translate-y-1">
     <a 
       class="w-full h-full"
@@ -34,28 +32,12 @@ const { title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram
       )}
     </a>
   </div>
-  <a href={href} class="bg-blue flex flex-col gap-2 items-center justify-end h-52 rounded-3xl p-4 pt-6">
+  <a href={href} class="bg-blue flex flex-col gap-2 items-center justify-end h-52 rounded-3xl p-4 pt-6 border border-border">
     <p class="text-white text-lg text-center inline-block hover:underline">
       {title.toLocaleUpperCase()}
     </p>
-    <div class="flex gap-4 p-4 rounded-lg">
-      {priceKilogram !== 0 && (
-        <p class="bg-blue-light p-2 rounded-md text-white font-semibold text-lg text-center">
-          {formatCurrency(priceKilogram)}/kg
-        </p>
-      )}
-      <div>
-        {priceHalfKilogram !== 0 && (
-          <p class="bg-blue-light p-2 rounded-md text-white font-semibold text-lg text-center">
-            {formatCurrency(priceHalfKilogram)}/500g
-          </p>
-        )}
-        {priceQuarterKilogram !== 0 && (
-          <p class="bg-blue-light p-2 rounded-md text-white font-semibold text-lg text-center">
-            {formatCurrency(priceQuarterKilogram)}/250g
-          </p>
-        )}
-      </div>
-    </div>
+    <p class="bg-gray-700 py-2 px-4 rounded-md text-golden font-bold text-xl text-center">
+      {formatCurrency(price)}
+    </p>
   </a>
 </div>

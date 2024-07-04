@@ -6,18 +6,16 @@ import Container from "@/UI/Container.astro";
 ---
 
 <Layout
-  title="Guisados"
+  title="Menú"
   description="Guisados en la Ciudad de México"
 >
-  <Container title="Menú">
-    {STEWS.map(({ title, href, img, priceKilogram, priceHalfKilogram, priceQuarterKilogram, available }) => (
+  <Container title="MENÚ">
+    {STEWS.map(({ title, href, img, price, available }) => (
       <Stew
         title={title}
         href={href}
         img={img}
-        priceKilogram={priceKilogram ?? 0}
-        priceHalfKilogram={priceHalfKilogram ?? 0}
-        priceQuarterKilogram={priceQuarterKilogram ?? 0}
+        price={price ?? 0}
         available={available}
       />
     ))}

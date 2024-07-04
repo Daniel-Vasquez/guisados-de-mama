@@ -10,15 +10,13 @@ interface Props {
 const { stews } = Astro.props;
 ---
 
-<Container title="Menú" styles="margin-top: 3rem;">
+<Container title="MENÚ" styles="margin-top: 3rem;">
   {stews.map((item: StewType) => (
     <Stew
       title={item.title}
       href={item.href}
       img={item.img}
-      priceKilogram={item.priceKilogram || 0}
-      priceHalfKilogram={item.priceHalfKilogram || 0}
-      priceQuarterKilogram={item.priceQuarterKilogram || 0}
+      price={item.price || 0}
       available={item.available}
     />
   ))}

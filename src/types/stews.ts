@@ -5,9 +5,7 @@ export type StewType = {
   additionalIngredients?: Array<string>;
   href: string;
   content: string;
-  priceKilogram?: number;
-  priceHalfKilogram?: number;
-  priceQuarterKilogram?: number;
+  price: number;
   img: string;
   available: boolean;
 };
