@@ -10,6 +10,10 @@ export const ROUTES: RouteType[] = [
     label: "Guisados",
   },
   {
+    href: "/bebidas",
+    label: "Bebidas",
+  },
+  {
     href: "/contactanos",
     label: "Contactanos",
   }

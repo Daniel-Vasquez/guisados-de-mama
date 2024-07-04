@@ -1,5 +1,5 @@
 ---
-import Stew from "@/components/Stew.astro";
+import Card from "@/components/Card.astro";
 import type { StewType } from "@/types/stews";
 import Container from "@/UI/Container.astro";
 
@@ -12,12 +12,12 @@ const { stews } = Astro.props;
 
 <Container title="MENÚ" styles="margin-top: 3rem;">
   {stews.map((item: StewType) => (
-    <Stew
+    <Card
       title={item.title}
       href={item.href}
       img={item.img}
       price={item.price || 0}
-      available={item.available}
+      imgSize="w-48"
     />
   ))}
 </Container>

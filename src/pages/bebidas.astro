@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { STEWS } from "@/constants/stews";
+import { DRINKS } from "@/constants/drinks";
 import Card from "@/components/Card.astro";
 import Container from "@/UI/Container.astro";
 ---
@@ -9,14 +9,14 @@ import Container from "@/UI/Container.astro";
   title="Menú"
   description="Guisados en la Ciudad de México"
 >
-  <Container title="MENÚ">
-    {STEWS.map(({ title, href, img, price }) => (
+  <Container title="BEBIDAS">
+    {DRINKS.map(({ title, href, img, price }) => (
       <Card
         title={title}
         href={href}
         img={img}
         price={price ?? 0}
-        imgSize="w-48"
+        imgSize="w-36"
       />
     ))}
   </Container>

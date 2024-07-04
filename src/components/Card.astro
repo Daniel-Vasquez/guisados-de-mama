@@ -6,30 +6,25 @@ interface Props {
   href: string;
   img: string;
   price: number;
-  available: boolean;
+  imgSize?: string;
 };
 
-const { title, href, img, price, available } = Astro.props;
+const { title, href, img, price, imgSize } = Astro.props;
 
 ---
 <div class="grid grid-rows-[100px_1fr]">
-  <div class="flex w-48 justify-center m-auto -rotate-12 translate-y-1">
+  <div class={`flex ${imgSize || "w-36"} justify-center m-auto -rotate-12 translate-y-1`}>
     <a 
       class="w-full h-full"
       href={href}
       transition:name=`media-image-${href}`
     >
       <img
-        class={`w-full h-full object-contain transition-all duration-300 ease-in-out hover:rotate-12 ${available ? 'grayscale-0' : 'grayscale'}`}
+        class="w-full h-full object-contain transition-all duration-300 ease-in-out hover:rotate-12"
         src={img}
         alt={title}
         loading="lazy"
       />
-      {!available && (
-        <div class="absolute inset-0 bg-opacity-50 flex items-center justify-center">
-          <p class="text-white font-semibold text-md">No disponible</p>
-        </div>
-      )}
     </a>
   </div>
   <a href={href} class="bg-blue flex flex-col gap-2 items-center justify-end h-52 rounded-3xl p-4 pt-6 border border-border">
