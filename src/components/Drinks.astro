@@ -1,23 +1,23 @@
 ---
 import Card from "@/components/Card.astro";
-import type { StewType } from "@/types/stews";
+import type { DrinkType } from "@/types/drinks";
 import Container from "@/UI/Container.astro";
 
 interface Props {
-  stews: StewType[];
+  drinks: DrinkType[];
 }
 
-const { stews } = Astro.props;
+const { drinks } = Astro.props;
 ---
 
-<Container title="GUISADOS" styles="margin-top: 3rem;">
-  {stews.map((item: StewType) => (
+<Container title="BEBIDAS" styles="margin-top: 3rem;">
+  {drinks.map((item: DrinkType) => (
     <Card
       title={item.title}
       href={item.href}
       img={item.img}
       price={item.price || 0}
-      imgSize="w-48"
+      imgSize="w-32"
     />
   ))}
 </Container>

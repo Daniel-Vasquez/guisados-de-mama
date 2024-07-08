@@ -1,7 +1,7 @@
 import { LogoWhatsapp } from "@/components/icons/LogoWhatsapp";
 const PUBLIC_MY_PHONE_NUMBER = import.meta.env.PUBLIC_MY_PHONE_NUMBER;
 const DEFAULT_TEXT =
-  "Hola,%20*Guisados%20de%20mamá*,%20me%20gustaría%20ordenar%20un%20guisado,%20¿podrían%20ayudarme?";
+  "Hola,%20*Guisados%20de%20mamá*,%20me%20gustaría%20realizar%20un%20pedido,%20¿podrían%20ayudarme?";
 
 export const ContactButton = ({ text, classButton }) => {
   return (
