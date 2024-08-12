@@ -28,10 +28,10 @@ const { title, href, img, price, imgSize } = Astro.props;
     </a>
   </div>
   <a href={href} class="bg-blue flex flex-col gap-2 items-center justify-end h-52 rounded-3xl p-4 pt-6 border border-border">
-    <p class="text-white text-lg text-center inline-block hover:underline">
+    <p class="text-white text-lg text-center font-medium inline-block hover:underline">
       {title.toLocaleUpperCase()}
     </p>
-    <p class="bg-gray-700 py-2 px-4 rounded-md text-golden font-bold text-xl text-center">
+    <p class="py-2 px-4 rounded-md text-golden font-bold text-xl text-center">
       {formatCurrency(price)}
     </p>
   </a>
